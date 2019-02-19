@@ -4,17 +4,50 @@
     <meta charset="UTF-8">
     <title>index</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
 
+{% comment %}Header{% endcomment %}
+<nav>
+    <div class="nav-wrapper">
+        <a href="#" class="brand-logo">Logo</a>
+        <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="#">Rund- und Spezialzelte</a></li>
+            <li><a href="#">Partyzelte</a></li>
+            <li><a href="#">Zubehör</a></li>
+            <li><a href="#">Über uns</a></li>
+            <li><a href="#">Offerte/Anfrage</a></li>
+        </ul>
+    </div>
+</nav>
 
-
-
+{% comment %}Mobile Menu{% endcomment %}
+<ul id="slide-out" class="sidenav">
+    <li>
+        <div class="background">
+            <p>Placeholder for Logo IMG</p>
+        </div>
+    </li>
+    <li><a href="#">Rund- und Spezialzelte</a></li>
+    <li><a href="#">Partyzelte</a></li>
+    <li><a href="#">Zubehör</a></li>
+    <li><a href="#">Über uns</a></li>
+    <li><a href="#">Offerte/Anfrage</a></li>
+</ul>
 
 
 
 {% comment %}Framework{% endcomment %}
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script>
+
+    $(document).ready(function () {
+        $('.sidenav').sidenav();
+    });
+
+</script>
 </body>
 </html>
