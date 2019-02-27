@@ -1,0 +1,13 @@
+{% extends 'tent/base.html' %}
+{% block title %}Offerte/Anfrage{% endblock %}
+{% block offer_active %}active{% endblock %}
+
+{% block body %}
+    <h1>Offerte/Anfrage</h1>
+    <form class="form-horizontal" action="" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input placeholder="Placeholder" id="first_name" type="text" class="validate" name="first_name">
+        <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+
+{% endblock %}

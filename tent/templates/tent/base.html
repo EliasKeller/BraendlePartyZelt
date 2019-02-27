@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>index</title>
+    <title>{% block title %}{% endblock %}</title>
     {% load static %}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -13,14 +13,14 @@
 {% comment %}Header{% endcomment %}
 <nav>
     <div class="nav-wrapper">
-        <a href="#" class="brand-logo">Logo</a>
+        <a href="{% url 'tent:index' %}" class="brand-logo">Logo</a>
         <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li><a href="#">Rund- und Spezialzelte</a></li>
             <li><a href="#">Partyzelte</a></li>
             <li><a href="#">Zubehör</a></li>
             <li><a href="#">Über uns</a></li>
-            <li><a href="#">Offerte/Anfrage</a></li>
+            <li  class="{% block offer_active %}{% endblock %}"><a href="{% url 'tent:offer' %}">Offerte/Anfrage</a></li>
         </ul>
     </div>
 </nav>
