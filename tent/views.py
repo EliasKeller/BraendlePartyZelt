@@ -7,4 +7,7 @@ def index(request):
 
 
 def offer(request):
+    if request.method == 'POST':
+        print(request.POST.get('first_name'))
+
     return render(request, 'tent/offer.html')

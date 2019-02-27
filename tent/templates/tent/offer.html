@@ -4,10 +4,10 @@
 
 {% block body %}
     <h1>Offerte/Anfrage</h1>
-    <p>Seit Jahren ist die Zeltvermietung Brändle ein verlässlicher Partner, wenn es um die Vermietung von Festzelten
-        und Zubehör geht.</p>
-    <p>Ob Gartenfest, Geburtstagsfeier, Dorffest, Hochzeit,Open-Air etc., wir bieten das passende Zelt mit Zubehör, das Ihren Wünschen und Erwartungen entspricht.</p>
-
-    <p>Verlangen Sie unverbindlich eine Offerte. Es würde uns freuen, wenn wir zum guten Gelingen Ihres nächsten Anlasses mit einem unserer Zelte einen Beitrag leisten dürften.</p>
+    <form class="form-horizontal" action="" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input placeholder="Placeholder" id="first_name" type="text" class="validate" name="first_name">
+        <button type="submit" class="btn btn-success">Submit</button>
+    </form>
 
 {% endblock %}
