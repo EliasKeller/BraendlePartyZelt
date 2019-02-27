@@ -1,92 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>index</title>
-    {% load static %}
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="{% static 'tent/style.css' %}">
-</head>
-<body>
-
-{% comment %}Header{% endcomment %}
-<nav>
-    <div class="nav-wrapper">
-        <a href="#" class="brand-logo">Logo</a>
-        <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a href="#">Rund- und Spezialzelte</a></li>
-            <li><a href="#">Partyzelte</a></li>
-            <li><a href="#">Zubehör</a></li>
-            <li><a href="#">Über uns</a></li>
-            <li><a href="#">Offerte/Anfrage</a></li>
-        </ul>
-    </div>
-</nav>
-
-{% comment %}Mobile Menu{% endcomment %}
-<ul id="slide-out" class="sidenav">
-    <li>
-        <div class="background">
-            <p>Placeholder for Logo IMG</p>
-        </div>
-    </li>
-    <li><a href="#">Rund- und Spezialzelte</a></li>
-    <li><a href="#">Partyzelte</a></li>
-    <li><a href="#">Zubehör</a></li>
-    <li><a href="#">Über uns</a></li>
-    <li><a href="#">Offerte/Anfrage</a></li>
-</ul>
-
-{% comment %}Parallax{% endcomment %}
-<div class="parallax-container">
-    <div class="parallax"><img src="{% static 'tent/images/parallax.jpg' %}"></div>
-</div>
+{% extends 'tent/base.html' %}
 
 
-{% comment %}Main-Content{% endcomment %}
-<main>
+{% block body %}
+    <h1>Wir lassen Sie nicht im Regen stehen!</h1>
+    <p>Seit Jahren ist die Zeltvermietung Brändle ein verlässlicher Partner, wenn es um die Vermietung von Festzelten
+        und Zubehör geht.</p>
+    <p>Ob Gartenfest, Geburtstagsfeier, Dorffest, Hochzeit,Open-Air etc., wir bieten das passende Zelt mit Zubehör, das Ihren Wünschen und Erwartungen entspricht.</p>
 
-</main>
+    <p>Verlangen Sie unverbindlich eine Offerte. Es würde uns freuen, wenn wir zum guten Gelingen Ihres nächsten Anlasses mit einem unserer Zelte einen Beitrag leisten dürften.</p>
 
-
-{% comment %}Footer{% endcomment %}
-<footer class="page-footer">
-    <div class="container">
-        <div class="row">
-            <div class="col l6 s12">
-                <h5 class="white-text">Footer Content</h5>
-                <p class="grey-text text-lighten-4">Placeholder for Logo IMG</p>
-            </div>
-            <div class="col l4 offset-l2 s12">
-                <h5 class="white-text">Navigation</h5>
-                <ul>
-                    <li><a class="grey-text text-lighten-3" href="#">Rund- und Spezialzelte</a></li>
-                    <li><a class="grey-text text-lighten-3" href="#">Partyzelte</a></li>
-                    <li><a class="grey-text text-lighten-3" href="#">Zubehör</a></li>
-                    <li><a class="grey-text text-lighten-3" href="#">Über uns</a></li>
-                    <li><a class="grey-text text-lighten-3" href="#">Offerte/Anfrage</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="footer-copyright">
-        <a class="grey-text text-lighten-4">Brändle Partyzelte | Bodenweg 3 | 9607 Mosnang | 079 344 36 81 | 071 983 50
-            64</a>
-    </div>
-</footer>
-
-{% comment %}Framework{% endcomment %}
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-<script>
-
-    $(document).ready(function () {
-        $('.sidenav').sidenav();
-        $('.parallax').parallax();
-    });
-
-</script>
-</body>
-</html>
+{% endblock %}
