@@ -1,5 +1,5 @@
-from django.http import HttpResponse
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from tent.forms import OfferForm
 
 
 def index(request):
@@ -8,6 +8,10 @@ def index(request):
 
 def offer(request):
     if request.method == 'POST':
-        print(request.POST.get('first_name'))
-
-    return render(request, 'tent/offer.html')
+        form = OfferForm(request.POST)
+        if form.is_valid():
+            print(form.cleaned_data['customer_name'])
+            redirect('/')
+    else:
+        form = OfferForm()
+    return render(request, 'tent/offer.html', {'form': form})

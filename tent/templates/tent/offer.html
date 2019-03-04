@@ -6,7 +6,8 @@
     <h1>Offerte/Anfrage</h1>
     <form class="form-horizontal" action="" method="post" enctype="multipart/form-data">
         {% csrf_token %}
-        <input placeholder="Placeholder" id="first_name" type="text" class="validate" name="first_name">
+        {{ form }}
+       {% comment %} <input placeholder="Placeholder" id="first_name" type="text" class="validate" name="first_name">{% endcomment %}
         <button type="submit" class="btn btn-success">Submit</button>
     </form>
 
