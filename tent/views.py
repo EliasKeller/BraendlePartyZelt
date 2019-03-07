@@ -10,7 +10,7 @@ def offer(request):
     if request.method == 'POST':
         form = OfferForm(request.POST)
         if form.is_valid():
-            print('yes')
+            print(form.cleaned_data['first_name'])
     else:
         form = OfferForm()
     return render(request, 'tent/offer.html', {'form': form})

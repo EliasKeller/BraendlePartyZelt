@@ -30,3 +30,4 @@ class OfferForm(forms.Form):
         Row('date_of_installation', 'date_of_destruction'),
         'comment',
     )
+
