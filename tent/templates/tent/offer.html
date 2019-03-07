@@ -1,4 +1,5 @@
 {% extends 'tent/base.html' %}
+{% load material_form %}
 {% block title %}Offerte/Anfrage{% endblock %}
 {% block offer_active %}active{% endblock %}
 
@@ -6,9 +7,19 @@
     <h1>Offerte/Anfrage</h1>
     <form class="form-horizontal" action="" method="post" enctype="multipart/form-data">
         {% csrf_token %}
-        {{ form }}
-       {% comment %} <input placeholder="Placeholder" id="first_name" type="text" class="validate" name="first_name">{% endcomment %}
+        {% form form=form %}
+            {% part form.first_name prefix %}<i class="material-icons prefix">face</i>{% endpart %}
+            {% part form.last_name prefix %}<i class="material-icons prefix">face</i>{% endpart %}
+            {% part form.phone prefix %}<i class="material-icons prefix">phone</i>{% endpart %}
+            {% part form.phone_mobile prefix %}<i class="material-icons prefix">phone</i>{% endpart %}
+            {% part form.fax prefix %}<i class="material-icons prefix">print</i>{% endpart %}
+            {% part form.email prefix %}<i class="material-icons prefix">mail</i>{% endpart %}
+            {% part form.date_of_event prefix %}<i class="material-icons prefix">insert_invitation</i>{% endpart %}
+            {% part form.date_of_installation prefix %}<i class="material-icons prefix">insert_invitation</i>{% endpart %}
+            {% part form.date_of_destruction prefix %}<i class="material-icons prefix">insert_invitation</i>{% endpart %}
+        {% endform %}
         <button type="submit" class="btn btn-success">Submit</button>
+        <button type="reset" class="btn btn-success">Reset</button>
     </form>
 
 {% endblock %}
