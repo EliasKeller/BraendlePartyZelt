@@ -5,7 +5,8 @@ body {
 }
 
 main {
-    padding: 50px;
+    flex: 1 0 auto;
+    padding: 150px;
 }
 
 
