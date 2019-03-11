@@ -1,3 +1,4 @@
 from django.contrib import admin
+from tent.models import Tent
 
-# Register your models here.
+admin.site.register(Tent)
