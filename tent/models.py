@@ -13,4 +13,5 @@ class Tent(models.Model):
     length = models.IntegerField()
     number_of_People = models.IntegerField()
     price = models.IntegerField()
+    tent_image = models.FileField(null=True)
 
