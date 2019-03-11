@@ -1,0 +1,20 @@
+{% extends 'tent/base.html' %}
+{% load material_form %}
+{% block title %}Partyzelte{% endblock %}
+{% block partyTent_active %}active{% endblock %}
+{% block body %}
+
+    {% if all_tents %}
+        {% for tent in all_tents %}
+            <img src="{{ tent.tent_image }}">
+            <h2>{{ tent.type }}</h2>
+            <h2>{{ tent.width }}</h2>
+            <h2>{{ tent.length }}</h2>
+            <h2>{{ tent.number_of_People }}</h2>
+            <h2>{{ tent.price }}</h2>
+
+        {% endfor %}
+
+    {% endif %}
+
+{% endblock %}
