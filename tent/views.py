@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.views import generic
 from tent.forms import OfferForm
-from .models import Tent
+from .models import Tent, TentType
 
 
 def index(request):
@@ -23,4 +23,4 @@ class PartyTentView(generic.ListView):
     context_object_name = 'all_tents'
 
     def get_queryset(self):
-        return Tent.objects.all()
+        return Tent.objects.filter(type=TentType.FESTZELT)
