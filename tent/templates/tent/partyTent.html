@@ -4,17 +4,30 @@
 {% block partyTent_active %}active{% endblock %}
 {% block body %}
 
-    {% if all_tents %}
-        {% for tent in all_tents %}
-            <img src="{{ tent.tent_image }}">
-            <h2>{{ tent.type }}</h2>
-            <h2>{{ tent.width }}</h2>
-            <h2>{{ tent.length }}</h2>
-            <h2>{{ tent.number_of_People }}</h2>
-            <h2>{{ tent.price }}</h2>
+    <div class="row">
 
-        {% endfor %}
+        {% if all_tents %}
+            {% for tent in all_tents %}
+                <div class="col s12 m6 l4">
+                    <div class="card">
+                        <div class="card-image waves-effect waves-block waves-light">
+                            <img class="activator" src="{{ tent.tent_image.url }}">
+                        </div>
+                        <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">{{ tent.width }} m - {{ tent.length }} m {{ tent.get_type_display }}<i
+                                class="material-icons right">expand_less</i></span>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">Card Title<i
+                                    class="material-icons right">close</i></span>
+                            <p>ca. {{ tent.number_of_People }}</p>
+                            <p>{{ tent.price }} Fr.</p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        {% endif %}
 
-    {% endif %}
+    </div>
 
 {% endblock %}
