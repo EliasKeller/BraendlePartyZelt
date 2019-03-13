@@ -1,7 +1,7 @@
 from django.shortcuts import render
-from django.views import generic
 from tent.forms import OfferForm
 from .models import Tent, TentType
+from .filters import PartyTentFilter
 
 
 def index(request):
@@ -18,9 +18,14 @@ def offer(request):
     return render(request, 'tent/offer.html', {'form': form})
 
 
-class PartyTentView(generic.ListView):
-    template_name = 'tent/partyTent.html'
-    context_object_name = 'all_tents'
+#class PartyTentView(generic.ListView):
+#    template_name = 'tent/partyTent.html'
+#    context_object_name = 'all_tents'
 
-    def get_queryset(self):
-        return Tent.objects.filter(type=TentType.FESTZELT)
+#    def get_queryset(self):
+#        return Tent.objects.filter(type=TentType.FESTZELT)
+
+def partyTentView(request):
+    partyTent_list = Tent.objects.all()
+    partyTent_filter = PartyTentFilter(request.GET, queryset=partyTent_list)
+    return render(request, 'tent/partyTent.html', {'filter': partyTent_filter})

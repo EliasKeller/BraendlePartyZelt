@@ -21,6 +21,3 @@ class Tent(models.Model):
     number_of_People = models.IntegerField()
     price = models.IntegerField()
     tent_image = models.FileField(null=True)
-
-    def __str__(self):
-        return self.get_type_display()

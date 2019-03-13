@@ -32,6 +32,7 @@ INSTALLED_APPS = [
     'tent.apps.TentConfig',
     'material',
     'django_enumfield',
+    'django_filters',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
