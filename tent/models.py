@@ -24,3 +24,29 @@ class Tent(models.Model):
 
     def __str__(self):
         return self.get_type_display()
+
+
+class EquipmentType(enum.Enum):
+    INVENTORY = 0
+    FLOOR = 1
+    HEATER = 2
+    BOUNCY_CASTLE = 3
+
+    labels = {
+        INVENTORY: 'Inventar',
+        FLOOR: 'Boden',
+        HEATER: 'Heizung',
+        BOUNCY_CASTLE: 'Hüpfburg',
+    }
+
+
+class Equipment(models.Model):
+    type = enum.EnumField(EquipmentType, default=EquipmentType.INVENTORY)
+    designation = models.CharField(max_length=250)
+    size_Or_Power = models.CharField(max_length=250)
+    price_fetched = models.IntegerField()
+    price_delivered = models.IntegerField()
+    equipment_image = models.FileField(null=True)
+
+    def __str__(self):
+        return self.get_type_display()
