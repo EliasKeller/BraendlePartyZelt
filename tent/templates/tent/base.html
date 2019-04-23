@@ -7,6 +7,7 @@
     {% include 'material/includes/material_css.html' %}
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{% static 'tent/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'tent/equipment.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'tent/cardStyle.css' %}">
 </head>
 <body>
@@ -18,10 +19,11 @@
         <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li><a href="#">Rund- und Spezialzelte</a></li>
-            <li class="{% block partyTent_active %}{% endblock %}"><a href="{% url 'tent:party_tent_search' %}">Partyzelte</a></li>
+            <li class="{% block partyTent_active %}{% endblock %}"><a href="{% url 'tent:party_tent_search' %}">Partyzelte</a>
+            </li>
             <li class="{% block equipment_active %}{% endblock %}"><a href="{% url 'tent:equipment' %}">Zubehör</a></li>
             <li><a href="#">Über uns</a></li>
-            <li  class="{% block offer_active %}{% endblock %}"><a href="{% url 'tent:offer' %}">Offerte/Anfrage</a></li>
+            <li class="{% block offer_active %}{% endblock %}"><a href="{% url 'tent:offer' %}">Offerte/Anfrage</a></li>
         </ul>
     </div>
 </nav>
