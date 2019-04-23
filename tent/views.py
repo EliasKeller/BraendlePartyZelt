@@ -1,12 +1,22 @@
 from django.shortcuts import render
-from django.views import generic
 from tent.forms import OfferForm
-from .models import Tent, TentType
+from .models import Tent, TentType, Equipment
 from .filters import TentFilter
 
 
 def index(request):
     return render(request, 'tent/index.html')
+
+
+def party_tent_search(request):
+    party_tent_list = Tent.objects.filter(type=TentType.FESTZELT)
+    party_tent_filter = TentFilter(request.GET, queryset=party_tent_list)
+    return render(request, 'tent/partyTent.html', {'filter': party_tent_filter})
+
+
+def equipment(request):
+    equipment_list = Equipment.objects.all()
+    return render(request, 'tent/equipment.html', {'equipment_list': equipment_list})
 
 
 def offer(request):
@@ -17,9 +27,3 @@ def offer(request):
     else:
         form = OfferForm()
     return render(request, 'tent/offer.html', {'form': form})
-
-
-def party_tent_search(request):
-    party_tent_list = Tent.objects.filter(type=TentType.FESTZELT)
-    party_tent_filter = TentFilter(request.GET, queryset=party_tent_list)
-    return render(request, 'tent/partyTent.html', {'filter': party_tent_filter})
