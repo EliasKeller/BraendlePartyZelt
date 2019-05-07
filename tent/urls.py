@@ -5,6 +5,8 @@ app_name = "tent"
 
 urlpatterns = [
     path('', views.index, name='index'),
-    path('offer/', views.offer, name='offer'),
-    path('partyzelte/', views.party_tent_search, name='party_tent_search')
+    path('partyzelte/', views.party_tent_search, name='party_tent_search'),
+    path('equipment/', views.equipment, name='equipment'),
+    path('offer/', views.offer, name='offer')
+
 ]
