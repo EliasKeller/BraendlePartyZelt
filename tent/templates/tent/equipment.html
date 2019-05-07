@@ -4,7 +4,16 @@
 {% block equipment_active %}active{% endblock %}
 {% block body %}
 
-    <div class="row">
+    <div id="test" class="row">
+            {% comment %}scrollspy{% endcomment %}
+        <div id="scrollspy" class="col hide-on-small-only m3 l2">
+            <ul class="section table-of-contents scrollspy-positioning">
+                <li><a href="#inventory">Inventar</a></li>
+                <li><a href="#floor">Boden</a></li>
+                <li><a href="#heater">Heizung</a></li>
+                <li><a href="#bouncy-castle">Hüpfburg</a></li>
+            </ul>
+        </div>
 
         {% comment %}invetory-equipments-cards{% endcomment %}
         <div id="inventory" class="col s10">
@@ -114,15 +123,7 @@
             {% endfor %}
         </div>
 
-        {% comment %}scrollspy{% endcomment %}
-        <div class="col hide-on-small-only m3 l2">
-            <ul class="section table-of-contents fixed scrollspy-positioning">
-                <li><a href="#inventory">Inventar</a></li>
-                <li><a href="#floor">Boden</a></li>
-                <li><a href="#heater">Heizung</a></li>
-                <li><a href="#bouncy-castle">Hüpfburg</a></li>
-            </ul>
-        </div>
+
     </div>
 
 {% endblock %}

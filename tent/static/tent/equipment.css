@@ -1,4 +1,20 @@
-.scrollspy-positioning {
-    top: 50px;
-    right: 200px;
+#test{
+    background-color: green;
+/*    display: flex;
+    flex-direction: column;*/
 }
+
+#scrollspy{
+    background-color: yellow;
+    position: sticky;
+    top: 0px;
+    right: 0px;
+    padding-right: 0px;
+}
+
+/*
+.scrollspy-positioning {
+    position: sticky;
+    top: 0px;
+    right: 0px;
+}*/
