@@ -4,6 +4,12 @@ body {
     flex-direction: column;
 }
 
+nav{
+    position: fixed;
+    top: 0;
+    z-index: 100;
+}
+
 main {
     flex: 1 0 auto;
     padding: 150px;

@@ -1,20 +1,19 @@
-#test{
+#main{
     background-color: green;
-/*    display: flex;
-    flex-direction: column;*/
+    display: flex;
+    align-items: center;
+}
+
+#container{
+    background: red;
+
 }
 
 #scrollspy{
-    background-color: yellow;
+    background: yellow;
+    padding-right: 5px;
     position: sticky;
     top: 0px;
     right: 0px;
-    padding-right: 0px;
+    float: right;
 }
-
-/*
-.scrollspy-positioning {
-    position: sticky;
-    top: 0px;
-    right: 0px;
-}*/
