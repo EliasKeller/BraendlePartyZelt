@@ -55,7 +55,12 @@
 
     {% endblock %}
 </main>
-
+{% comment %}Floating Action Button{% endcomment %}
+<div class="fixed-action-btn">
+    <a class="btn-floating btn-large waves-effect waves-light" href="{% url 'tent:index' %}">
+        <i class="large material-icons">home</i>
+    </a>
+</div>
 
 {% comment %}Footer{% endcomment %}
 <footer class="page-footer blue lighten-2">
@@ -94,6 +99,7 @@
         $('.scrollspy').scrollSpy({
             scrollOffset: 20
         });
+        $('.fixed-action-btn').floatingActionButton();
     });
 
 </script>
