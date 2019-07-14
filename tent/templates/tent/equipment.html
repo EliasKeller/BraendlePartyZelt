@@ -17,7 +17,7 @@
 
         <div id="container">
             {% comment %}invetory-equipments-cards{% endcomment %}
-            <div id="inventory" class="col s10">
+            <div id="inventory" class="col s10 scrollspy">
                 <h2>Inventar</h2>
                 {% for equipment in equipment_list %}
                     {% if equipment.type == 0 %}
@@ -44,7 +44,7 @@
             </div>
 
             {% comment %}floor-equipments-cards{% endcomment %}
-            <div id="floor" class="col s10">
+            <div id="floor" class="col s10 scrollspy">
                 <h2>Boden</h2>
                 {% for equipment in equipment_list %}
                     {% if equipment.type == 1 %}
@@ -71,7 +71,7 @@
             </div>
 
             {% comment %}heater-equipments-cards{% endcomment %}
-            <div id="heater" class="col s10">
+            <div id="heater" class="col s10 scrollspy">
                 <h2>Heizung</h2>
                 {% for equipment in equipment_list %}
                     {% if equipment.type == 3 %}
@@ -98,7 +98,7 @@
             </div>
 
             {% comment %}bouncy_castle-equipments-cards{% endcomment %}
-            <div id="bouncy-castle" class="col s10">
+            <div id="bouncy-castle" class="col s10 scrollspy">
                 <h2>Hüpfburg</h2>
                 {% for equipment in equipment_list %}
                     {% if equipment.type == 3 %}
@@ -124,8 +124,6 @@
                 {% endfor %}
             </div>
         </div>
-
-
     </div>
 
 {% endblock %}

@@ -1,19 +1,27 @@
-#main{
-    background-color: green;
-    display: flex;
-    align-items: center;
-}
-
-#container{
-    background: red;
-
-}
-
 #scrollspy{
-    background: yellow;
+    padding-top: 15px;
     padding-right: 5px;
     position: sticky;
-    top: 0px;
+    top: 65px;
     right: 0px;
     float: right;
+}
+
+#scrollspy > ul{
+    padding: 0px;
+}
+
+#scrollspy > ul > li > a{
+    font-weight: bold;
+}
+
+#scrollspy > ul > li > a:hover {
+    font-weight: bolder;
+    color: rgb(0,182,158, 0.5);
+    border-left: 1.5px solid rgb(0,182,158, 0.5);
+}
+
+#scrollspy > ul > li > a.active {
+    color: #00B69E;
+    border-left: 3px solid #00B69E;
 }
