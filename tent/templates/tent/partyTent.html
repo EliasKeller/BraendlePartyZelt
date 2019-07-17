@@ -12,7 +12,7 @@
             <button type="submit">Search</button>
         </form>
         {% for tent in filter.qs %}
-            <div class="col s12 m6 l4">
+            <div class="col s12 m6 l4" data-aos="fade-up">
                 <div class="card">
                     <div class="card-image waves-effect waves-block waves-light">
                         <img class="activator" src="{{ tent.tent_image.url }}">

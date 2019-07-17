@@ -21,7 +21,7 @@
                 <h2>Inventar</h2>
                 {% for equipment in equipment_list %}
                     {% if equipment.type == 0 %}
-                        <div class="col s12 m6 l4">
+                        <div class="col s12 m6 l4" data-aos="fade-up">
                             <div class="card">
                                 <div class="card-image waves-effect waves-block waves-light">
                                     <img class="activator" src="{{ equipment.equipment_image.url }}">
@@ -48,7 +48,7 @@
                 <h2>Boden</h2>
                 {% for equipment in equipment_list %}
                     {% if equipment.type == 1 %}
-                        <div class="col s12 m6 l4">
+                        <div class="col s12 m6 l4" data-aos="fade-up">
                             <div class="card">
                                 <div class="card-image waves-effect waves-block waves-light">
                                     <img class="activator" src="{{ equipment.equipment_image.url }}">
@@ -75,7 +75,7 @@
                 <h2>Heizung</h2>
                 {% for equipment in equipment_list %}
                     {% if equipment.type == 3 %}
-                        <div class="col s12 m6 l4">
+                        <div class="col s12 m6 l4" data-aos="fade-up">
                             <div class="card">
                                 <div class="card-image waves-effect waves-block waves-light">
                                     <img class="activator" src="{{ equipment.equipment_image.url }}">
@@ -102,7 +102,7 @@
                 <h2>Hüpfburg</h2>
                 {% for equipment in equipment_list %}
                     {% if equipment.type == 3 %}
-                        <div class="col s12 m6 l4">
+                        <div class="col s12 m6 l4" data-aos="fade-up">
                             <div class="card">
                                 <div class="card-image waves-effect waves-block waves-light">
                                     <img class="activator" src="{{ equipment.equipment_image.url }}">
