@@ -7,9 +7,14 @@
     <div class="row">
 
         {% comment %}        {% if all_tents %}{% endcomment %}
-        <form method="get">
-            {{ filter.form.as_p }}
-            <button type="submit">Search</button>
+        <form class="search-form" method="get">
+            <div class="search-container">
+                {{ filter.form.as_p }}
+            </div>
+            <div class="search-button-container">
+                <button type="submit" class="btn waves-effect waves-light btn-success btn-absenden">Suchen<i
+                    class="material-icons right">search</i></button>
+            </div>
         </form>
         {% for tent in filter.qs %}
             <div class="col s12 m6 l4" data-aos="fade-up">
@@ -22,7 +27,7 @@
                                 class="material-icons right">expand_less</i></span>
                     </div>
                     <div class="card-reveal">
-                            <span class="card-title grey-text text-darken-4">Card Title<i
+                            <span class="card-title grey-text text-darken-4">{{ tent.width }} m - {{ tent.length }} m {{ tent.get_type_display }}<i
                                     class="material-icons right">close</i></span>
                         <p>ca. {{ tent.number_of_People }}</p>
                         <p>{{ tent.price }} Fr.</p>
