@@ -1,5 +1,21 @@
+#maindouble{
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+#equipment-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
 
-#scrollspy{
+#equipment-container > div {
+    margin-left: 0;
+}
+
+#scrollspy {
+    display: inline-table;
     padding-top: 15px;
     padding-right: 5px;
     position: sticky;
@@ -8,18 +24,18 @@
     float: right;
 }
 
-#scrollspy > ul{
+#scrollspy > ul {
     padding: 0px;
 }
 
-#scrollspy > ul > li > a{
+#scrollspy > ul > li > a {
     font-weight: bold;
 }
 
 #scrollspy > ul > li > a:hover {
     font-weight: bolder;
-    color: rgb(0,182,158, 0.5);
-    border-left: 1.5px solid rgb(0,182,158, 0.5);
+    color: rgb(0, 182, 158, 0.5);
+    border-left: 1.5px solid rgb(0, 182, 158, 0.5);
 }
 
 #scrollspy > ul > li > a.active {
