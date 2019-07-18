@@ -10,6 +10,10 @@ nav {
     z-index: 100;
 }
 
+.parallax-container{
+    height: 100vh;
+}
+
 main {
     flex: 1 0 auto;
     padding: 0px 150px 150px 150px;
