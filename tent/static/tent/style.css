@@ -9,6 +9,10 @@ nav {
     top: 0;
     z-index: 100;
 }
+.mobile-nav-active:active{
+    color: #00B69E;
+}
+
 
 #parallax-base {
     height: 100vh;
