@@ -1,3 +1,15 @@
 #parallax-index {
         margin: 0px -150px 0px -150px;
 }
+
+@media screen and (max-width: 990px) {
+    #parallax-index {
+        margin: 0px -75px 0px -75px;
+}
+}
+
+@media screen and (max-width: 820px) {
+    #parallax-index {
+        margin: 0px -15px 0px -15px;
+}
+}
