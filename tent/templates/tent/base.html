@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{% static 'tent/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'tent/index.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'tent/animate.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'tent/equipment.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'tent/cardStyle.css' %}">
@@ -47,7 +48,7 @@
 </ul>
 
 {% comment %}Parallax{% endcomment %}
-<div class="parallax-container">
+<div id="parallax-base" class="parallax-container">
     <div class="parallax"><img src="{% static 'tent/images/parallax.jpg' %}">
         <div class="container-animated-arrow">
             <div class="chevron"></div>
