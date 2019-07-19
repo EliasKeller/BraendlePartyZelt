@@ -24,7 +24,7 @@ SECRET_KEY = '=ynqj*shjjta_j=udasi)9e4g!vv&)h1ng&3wtg#&un!_8#i1b'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['eliaskeller.pythonanywhere.com']
 
 # Application definition
 
@@ -116,7 +116,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/dev/howto/static-files/
 
 STATIC_URL = '/static/'
-
+STATIC_ROOT = '/home/eliaskeller/BraendlePartyZelt/static/'
 # root where images will get stored
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
