@@ -9,6 +9,10 @@ nav {
     top: 0;
     z-index: 100;
 }
+.mobile-nav-active:active{
+    color: #00B69E;
+}
+
 
 #parallax-base {
     height: 100vh;
@@ -17,10 +21,6 @@ nav {
 main {
     flex: 1 0 auto;
     padding: 0px 150px 150px 150px;
-}
-
-.btn-floating {
-    background: #00B69E;
 }
 
 .footer-copyright {

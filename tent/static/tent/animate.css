@@ -84,12 +84,12 @@
 
 @media screen and (max-width: 990px) {
     .chevron {
-        margin-top: 87.5vh;
+        margin-top: 85vh;
     }
 }
 
 @media screen and (max-width: 820px) {
     .chevron {
-        margin-top: 85vh;
+        margin-top: 80vh;
     }
 }
