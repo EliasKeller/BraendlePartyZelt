@@ -41,10 +41,10 @@
         </div>
     </li>
     <li><a href="#">Rund- und Spezialzelte</a></li>
-    <li><a href="#">Partyzelte</a></li>
-    <li><a href="#">Zubehör</a></li>
+    <li><a href="{% url 'tent:party_tent_search' %}">Partyzelte</a></li>
+    <li><a href="{% url 'tent:equipment' %}">Zubehör</a></li>
     <li><a href="#">Über uns</a></li>
-    <li><a href="#">Offerte/Anfrage</a></li>
+    <li><a href="{% url 'tent:offer' %}">Offerte/Anfrage</a></li>
 </ul>
 
 {% comment %}Parallax{% endcomment %}
