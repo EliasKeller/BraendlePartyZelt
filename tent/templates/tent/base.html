@@ -23,12 +23,12 @@
         <a href="{% url 'tent:index' %}" class="brand-logo">Logo</a>
         <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a href="#">Rund- und Spezialzelte</a></li>
-            <li class="{% block partyTent_active %}{% endblock %}"><a href="{% url 'tent:party_tent_search' %}">Partyzelte</a>
+            <li class="{% block partyTent_active %}{% endblock %}"><a href="{% url 'tent:party_tent_search' %}">Festzelt</a>
             </li>
+            <li><a href="#">Rund- und Spezialzelte</a></li>
             <li class="{% block equipment_active %}{% endblock %}"><a href="{% url 'tent:equipment' %}">Zubehör</a></li>
-            <li><a href="#">Über uns</a></li>
             <li class="{% block offer_active %}{% endblock %}"><a href="{% url 'tent:offer' %}">Offerte/Anfrage</a></li>
+            <li><a href="#">Über uns</a></li>
         </ul>
     </div>
 </nav>
@@ -40,11 +40,11 @@
             <span>Placeholder for Logo IMG</span>
         </div>
     </li>
+    <li><a href="{% url 'tent:party_tent_search' %}">Festzelt</a></li>
     <li><a href="#">Rund- und Spezialzelte</a></li>
-    <li><a href="{% url 'tent:party_tent_search' %}">Partyzelte</a></li>
     <li><a href="{% url 'tent:equipment' %}">Zubehör</a></li>
-    <li><a href="#">Über uns</a></li>
     <li><a href="{% url 'tent:offer' %}">Offerte/Anfrage</a></li>
+    <li><a href="#">Über uns</a></li>
 </ul>
 
 {% comment %}Parallax{% endcomment %}
@@ -83,11 +83,11 @@
             <div class="col l4 offset-l2 s12">
                 <h5 class="white-text">Navigation</h5>
                 <ul>
+                    <li><a class="grey-text text-lighten-3" href="#">Festzelt</a></li>
                     <li><a class="grey-text text-lighten-3" href="#">Rund- und Spezialzelte</a></li>
-                    <li><a class="grey-text text-lighten-3" href="#">Partyzelte</a></li>
                     <li><a class="grey-text text-lighten-3" href="#">Zubehör</a></li>
-                    <li><a class="grey-text text-lighten-3" href="#">Über uns</a></li>
                     <li><a class="grey-text text-lighten-3" href="#">Offerte/Anfrage</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#">Über uns</a></li>
                 </ul>
             </div>
         </div>
