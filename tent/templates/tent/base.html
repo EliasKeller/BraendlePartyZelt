@@ -23,7 +23,8 @@
         <a href="{% url 'tent:index' %}" class="brand-logo">Logo</a>
         <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li class="{% block partyTent_active %}{% endblock %}"><a href="{% url 'tent:party_tent_search' %}">Festzelt</a>
+            <li class="{% block partyTent_active %}{% endblock %}"><a
+                    href="{% url 'tent:party_tent_search' %}">Festzelt</a>
             </li>
             <li><a href="#">Rund- und Spezialzelte</a></li>
             <li class="{% block equipment_active %}{% endblock %}"><a href="{% url 'tent:equipment' %}">Zubehör</a></li>
@@ -32,6 +33,13 @@
         </ul>
     </div>
 </nav>
+
+{% comment %}Messages{% endcomment %}
+{% if messages %}
+    {% for message in messages %}
+        <script>M.toast({html: "{{ message }}", classes: 'green rounded', displayLength: 2000});</script>
+    {% endfor %}
+{% endif %}
 
 {% comment %}Mobile Menu{% endcomment %}
 <ul id="slide-out" class="sidenav">

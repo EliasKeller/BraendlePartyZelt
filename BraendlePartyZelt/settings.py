@@ -124,8 +124,8 @@ MEDIA_URL = '/media/'
 #EMAIL-Settings
 EMAIL_HOST = 'imap.gmail.com'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'elias.keller@gmail.com'
-EMAIL_HOST_PASSWORD = '*******'
+EMAIL_HOST_USER = 'offertenanfrage.bpz@gmail.com'
+EMAIL_HOST_PASSWORD = 'Bodenweg9607'
 EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
 
