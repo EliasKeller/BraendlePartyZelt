@@ -1,3 +1,4 @@
+from django.core.mail import send_mail
 from django.shortcuts import render
 from tent.forms import OfferForm
 from .models import Tent, TentType, Equipment
@@ -24,6 +25,11 @@ def offer(request):
         form = OfferForm(request.POST)
         if form.is_valid():
             print(form.cleaned_data['first_name'])
+            send_mail('Subject here',
+                      'Here is the message.',
+                      'elias.keller@gmail.com',
+                      ['cewofi@ionemail.net'],
+                      fail_silently=False)
     else:
         form = OfferForm()
     return render(request, 'tent/offer.html', {'form': form})

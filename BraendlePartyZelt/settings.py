@@ -120,3 +120,13 @@ STATIC_ROOT = '/home/eliaskeller/BraendlePartyZelt/static/'
 # root where images will get stored
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+
+#EMAIL-Settings
+EMAIL_HOST = 'imap.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'elias.keller@gmail.com'
+EMAIL_HOST_PASSWORD = '*******'
+EMAIL_USE_TLS = True
+EMAIL_USE_SSL = False
+
+
