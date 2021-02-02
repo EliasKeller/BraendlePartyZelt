@@ -5,6 +5,9 @@
 
 {% block body %}
     <h1>Offerte/Anfrage</h1>
+    <p class="flow-text">Haben wir Ihr Interesse geweckt? Zögern Sie nicht, uns zu kontaktieren. Senden Sie uns mit
+        untenstehendem Kontaktformular die Angaben zu Ihrem Festanlass. Sehr gerne senden wir Ihnen eine unverbindliche
+        Offerte zu.</p>
     <form class="form-horizontal" action="" method="post" enctype="multipart/form-data">
         {% csrf_token %}
         {% form form=form %}
@@ -14,11 +17,15 @@
             {% part form.phone_mobile prefix %}<i class="material-icons prefix prefix-icon">phone</i>{% endpart %}
             {% part form.fax prefix %}<i class="material-icons prefix prefix-icon">print</i>{% endpart %}
             {% part form.email prefix %}<i class="material-icons prefix prefix-icon">mail</i>{% endpart %}
-            {% part form.date_of_event prefix %}<i class="material-icons prefix prefix-icon">insert_invitation</i>{% endpart %}
-            {% part form.date_of_installation prefix %}<i class="material-icons prefix prefix-icon">insert_invitation</i>{% endpart %}
-            {% part form.date_of_destruction prefix %}<i class="material-icons prefix prefix-icon">insert_invitation</i>{% endpart %}
+            {% part form.date_of_event prefix %}<i class="material-icons prefix prefix-icon">insert_invitation</i>
+            {% endpart %}
+            {% part form.date_of_installation prefix %}
+                <i class="material-icons prefix prefix-icon">insert_invitation</i>{% endpart %}
+            {% part form.date_of_destruction prefix %}<i class="material-icons prefix prefix-icon">insert_invitation</i>
+            {% endpart %}
         {% endform %}
-        <button type="submit" class="btn waves-effect waves-light btn-success btn-absenden">Absenden<i class="material-icons right">send</i></button>
+        <button type="submit" class="btn waves-effect waves-light btn-success btn-absenden">Absenden<i
+                class="material-icons right">send</i></button>
     </form>
 
 {% endblock %}

@@ -4,48 +4,85 @@
 
 {% block body %}
     <h1>Wir lassen Sie nicht im Regen stehen!</h1>
-    <p>Seit Jahren ist die Zeltvermietung Brändle ein verlässlicher Partner, wenn es um die Vermietung von Festzelten
-        und Zubehör geht.Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
-        ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-        rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
-        amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-        erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no
-        sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+    <p class="flow-text">Ob Geschäftsanlass, Geburtstagsfeier, Hochzeit oder andere Feierlichkeiten – <strong><b>Brändle
+        Partyzelt</b></strong> bietet das
+        passende Zelt mit Zubehör, das ihren Erwartungen entspricht.</p>
+    <p class="flow-text">Unser Angebot umfasst Zelte für 16 Personen bis hin zu über 2'000 Personen. Auch für Sie ist
+        ein passendes Zelt dabei.</p>
 
-    <p><strong>Ob Gartenfest, Geburtstagsfeier, Dorffest, Hochzeit,Open-Air etc.,
-        wir bieten das passende Zelt mit Zubehör, das Ihren Wünschen und Erwartungen entspricht.</strong></p>
+    <div class="button-container">
+        <button type="button" onclick="window.location.href = {% url 'tent:party_tent_search' %};"
+                class="btn waves-effect waves-light btn-success">Zelt finden<i
+                class="material-icons right">search</i></button>
+    </div>
+    <p class="flow-text">Wir versorgen Sie auch mit dem benötigten Festinventar.
+        Von Festbankgarnituren über Barelemente bis hin zur Wärmeerzeugung finden Sie eine grosse Produktpalette bei
+        uns. Gerne erfüllen wir auch Ihre individuellen Wünsche.</p>
 
-    <p>Verlangen Sie unverbindlich eine Offerte.
-        Es würde uns freuen, wenn wir zum guten Gelingen Ihres nächsten Anlasses mit einem unserer Zelte einen Beitrag
-        leisten dürften.Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
-        ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-        rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
-        amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-        erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no
-        sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+    <div class="button-container">
+        <button type="button" onclick="window.location.href = {% url 'tent:equipment' %};"
+                id="last-button-before-parallax" class="btn waves-effect waves-light btn-success">Inventar finden<i
+                class="material-icons right">search</i></button>
+    </div>
 
     <div id="parallax-index" class="parallax-container">
         <div class="parallax"><img src="{% static 'tent/images/parallax2.jpg' %}"></div>
     </div>
 
-    <h1>Wir lassen Sie nicht im Regen stehen!</h1>
-    <p>Seit Jahren ist die Zeltvermietung Brändle ein verlässlicher Partner, wenn es um die Vermietung von Festzelten
-        und Zubehör geht.Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
-        ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-        rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
-        amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-        erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no
-        sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+    <div class="card-container">
+        <div class="card">
+            <div class="card-image">
+                <img src="{% static 'tent/images/Porträt Armin Brändle.jpg' %}">
+                <h2 class="card-title">Kundennähe</h2>
+            </div>
+            <div class="card-content">
+                <p class="flow-text">Der persönliche Kontakt mit den Kunden liegt uns am Herzen. Gerade bei
+                    Veranstaltungen ist es
+                    wichtig, dass am grossen Tag alles perfekt passt.
+                    Wir kommen sehr gerne bei Ihnen vorbei, um das Festgelände zu begutachten und die Offerte Ihren
+                    persönlichen
+                    Bedürfnissen anzupassen.</p>
+                <div class="card-action">
+                    <button type="button" onclick="window.location.href = {% url 'tent:offer' %};"
+                            class="btn waves-effect waves-light btn-success">Kontaktiere uns<i
+                            class="material-icons right">contact_mail</i></button>
+                </div>
+            </div>
+        </div>
 
-    <p><strong>Ob Gartenfest, Geburtstagsfeier, Dorffest, Hochzeit,Open-Air etc.,
-        wir bieten das passende Zelt mit Zubehör, das Ihren Wünschen und Erwartungen entspricht.</strong></p>
+        <div class="card card-reverse">
+            <div class="card-content">
+                <p class="flow-text">Seit über 20 Jahren sind wir in der Veranstaltungsbranche in der Ostschweiz tätig.
+                    Gerne unterstützen wir Sie mit unserer Erfahrung bei der Planung ihres Anlasses und tragen so zu
+                    einer
+                    gelungenen Durchführung bei.</p>
+                <div class="card-action">
+                    <button type="button" onclick="window.location.href = {% url 'tent:party_tent_search' %};"
+                            class="btn waves-effect waves-light btn-success">Über uns<i
+                            class="material-icons right">person</i></button>
+                </div>
+            </div>
+            <div class="card-image">
+                <img src="{% static 'tent/images/Aufbau.jpg' %}">
+                <h2 class="card-title">Erfahrung</h2>
+            </div>
+        </div>
 
-    <p>Verlangen Sie unverbindlich eine Offerte.
-        Es würde uns freuen, wenn wir zum guten Gelingen Ihres nächsten Anlasses mit einem unserer Zelte einen Beitrag
-        leisten dürften.Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
-        ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-        rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
-        amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-        erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no
-        sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        <div class="card">
+            <div class="card-image">
+                <img src="{% static 'tent/images/Zelt Wald.jpg' %}">
+                <h2 class="card-title">Spontanität</h2>
+            </div>
+            <div class="card-content">
+                <p class="flow-text">Trotz einer guten Planung und einem eingespielten Organisationskomitee kommt es
+                    immer
+                    wieder
+                    vor, dass ein Anlass unvorhersehbar beeinträchtigt wird.
+                    Wir sind an Ihrer Seite und helfen Ihnen, auch am Wochenende, das Problem zu beseitigen. Gemeinsam
+                    mit
+                    uns
+                    werden Sie eine passende Lösung finden.</p>
+            </div>
+        </div>
+    </div>
 {% endblock %}
