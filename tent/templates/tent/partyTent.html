@@ -5,6 +5,14 @@
 {% block body %}
 
     <div class="row">
+        <h2>Zelte</h2>
+        <p class="flow-text">Wir bieten Ihnen ein passendes Zelt für Ihren Anlass. Sie finden hier
+            unser Angebot, das Schnellbauzelte, Pagodenzelte sowie Festhallen umfasst. Gerne passen wir uns Ihren
+            persönlichen Bedürfnissen an und kombinieren verschiedene Zelte. Treten Sie mit uns für eine persönliche
+            Beratung telefonisch oder per Kontaktformular in Kontakt!</p>
+        <p class="flow-text">In den Preisen ist jeweils die Grundbeleuchtung sowie die Befestigung mit Bodenankern
+            enthalten. Zudem stehen wir Ihnen mit einem Montageleiter beim Auf- und Rückbau zur Seite. Zusätzliche
+            Hilfspersonen werden vom Mieter gestellt.</p>
 
         {% comment %}        {% if all_tents %}{% endcomment %}
         <form class="search-form" method="get">
@@ -13,7 +21,7 @@
             </div>
             <div class="search-button-container">
                 <button type="submit" class="btn waves-effect waves-light btn-success btn-absenden">Suchen<i
-                    class="material-icons right">search</i></button>
+                        class="material-icons right">search</i></button>
             </div>
         </form>
         {% for tent in filter.qs %}
@@ -36,6 +44,13 @@
             </div>
         {% endfor %}
         {% comment %}        {% endif %}{% endcomment %}
+
+        <p class="flow-text">Falls keine Bodenanker möglich sind, wird gegen eine Aufwandsentschädigung die Sicherheit
+            mit Ballastierungen gewährleistet. </p>
+        <p class="flow-text">Gerne bieten wir Ihnen gegen eine Aufwandsentschädigung auch den Service an, den kompletten
+            Auf- und Rückbau durch uns erledigen zu lassen.</p>
+        <p class="flow-text">Gerne bieten wir Ihnen gegen eine Aufwandsentschädigung auch den Service an, den kompletten
+            Auf- und Rückbau durch uns erledigen zu lassen.</p>
 
     </div>
 

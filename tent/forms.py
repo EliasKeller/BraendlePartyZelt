@@ -6,7 +6,7 @@ class OfferForm(forms.Form):
     first_name = forms.CharField(required=True, max_length=250, label="Vorname")
     last_name = forms.CharField(required=True, max_length=250, label="Nachname")
     street = forms.CharField(required=True, max_length=250, label="Strasse")
-    plz = forms.IntegerField(required=True, label="PLZ")
+    plz = forms.IntegerField(required=True, min_value=1000, max_value=9999, label="PLZ")
     place = forms.CharField(required=True, max_length=250, label="Ort")
     phone = forms.IntegerField(required=False, label='Telefon')
     phone_mobile = forms.IntegerField(required=True, label='Mobil')

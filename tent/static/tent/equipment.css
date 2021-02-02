@@ -42,3 +42,7 @@
     color: #00B69E;
     border-left: 3px solid #00B69E;
 }
+
+.left-text-alignment{
+    text-align: left;
+}
