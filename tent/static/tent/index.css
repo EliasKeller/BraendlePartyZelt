@@ -1,8 +1,10 @@
+
 #parallax-index {
     margin: 0px -250px 0px -250px;
+        height: 100vh;
 }
 
-.card {
+.card-index {
     display: flex;
     flex-direction: row;
     background: #37474f;
@@ -55,19 +57,19 @@
 }
 
 @media screen and (max-width: 1845px) {
-    .card {
+    .card-index {
         width: 90%;
     }
 }
 
 @media screen and (max-width: 1770px) {
-    .card {
+    .card-index {
         width: 95%;
     }
 }
 
 @media screen and (max-width: 1705px) {
-    .card {
+    .card-index {
         width: 100%;
     }
 }
@@ -84,7 +86,7 @@
         padding-top: 50px;
     }
 
-    .card {
+    .card-index {
         display: block;
         width: 40%;
         margin: 0 5px 0 5px;
@@ -150,7 +152,7 @@
         align-items: center;
     }
 
-    .card {
+    .card-index {
         width: 80%;
         margin: 15px 0 15px 0;
     }

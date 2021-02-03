@@ -1,10 +1,9 @@
-#parallax-offer {
+#parallax-aboutMe {
     height: 100vh;
     margin: 0px -250px 0px -250px;
 }
 
-
-#background-offer {
+#background-aboutMe {
     position: absolute;
     top: 40vh;
     height: 15vh;
@@ -15,49 +14,43 @@
     justify-content: center;
 }
 
-#background-offer > h1 {
+#background-aboutMe > h1 {
     margin: 0;
     color: white;
     font-size: 7vh;
 }
 
-.btn-absenden{
-    background: #00B69E !important;
-    max-width: 200px;
+iframe {
     width: 100%;
-    margin-top: 15px;
-}
-
-.prefix-icon{
-    color: #00B69E !important;
+    height: 500px;
 }
 
 @media screen and (max-width: 1645px) {
-    #parallax-offer {
+    #parallax-aboutMe {
         margin: 0px -150px 0px -150px;
     }
 }
 
 @media screen and (max-width: 1450px) {
-    #parallax-offer {
+    #parallax-aboutMe {
         margin: 0px -90px 0px -90px;
     }
 }
 
 @media screen and (max-width: 1290px) {
-    #parallax-offer {
+    #parallax-aboutMe {
         margin: 0px -70px 0px -70px;
     }
 }
 
 @media screen and (max-width: 990px) {
-    #parallax-offer {
+    #parallax-aboutMe {
         margin: 0px -75px 0px -75px;
     }
 }
 
 @media screen and (max-width: 820px) {
-    #parallax-offer {
+    #parallax-aboutMe {
         margin: 0px -15px 0px -15px;
     }
 }

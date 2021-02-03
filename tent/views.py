@@ -27,3 +27,7 @@ def offer(request):
     else:
         form = OfferForm()
     return render(request, 'tent/offer.html', {'form': form})
+
+
+def aboutMe(request):
+    return render(request, 'tent/aboutMe.html')
