@@ -3,7 +3,21 @@
 {% block title %}Brändle Partyzelt{% endblock %}
 
 {% block body %}
-    <h1>Wir lassen Sie nicht im Regen stehen!</h1>
+    {% comment %}Parallax{% endcomment %}
+    <div id="parallax-index" class="parallax-container">
+        <div class="parallax"><img src="{% static 'tent/images/parallax1.jpg' %}">
+            <div class="logo_container_center">
+                <img src="{% static 'tent/images/Zeichnung.svg' %}" alt="Brändle Partyzelt">
+                <h1>Wir lassen Sie nicht im Regen stehen!</h1>
+            </div>
+            <div class="container-animated-arrow">
+                <div class="chevron"></div>
+                <div class="chevron"></div>
+                <div class="chevron"></div>
+            </div>
+        </div>
+    </div>
+
     <p class="flow-text">Ob Geschäftsanlass, Geburtstagsfeier, Hochzeit oder andere Feierlichkeiten – <strong><b>Brändle
         Partyzelt</b></strong> bietet das
         passende Zelt mit Zubehör, das ihren Erwartungen entspricht.</p>
@@ -15,6 +29,7 @@
                 class="btn waves-effect waves-light btn-success">Zelt finden<i
                 class="material-icons right">search</i></button>
     </div>
+
     <p class="flow-text">Wir versorgen Sie auch mit dem benötigten Festinventar.
         Von Festbankgarnituren über Barelemente bis hin zur Wärmeerzeugung finden Sie eine grosse Produktpalette bei
         uns. Gerne erfüllen wir auch Ihre individuellen Wünsche.</p>
@@ -30,7 +45,7 @@
     </div>
 
     <div class="card-container">
-        <div class="card">
+        <div class="card card-index">
             <div class="card-image">
                 <img src="{% static 'tent/images/Porträt Armin Brändle.jpg' %}">
                 <h2 class="card-title">Kundennähe</h2>
@@ -50,7 +65,7 @@
             </div>
         </div>
 
-        <div class="card card-reverse">
+        <div class="card card-reverse card-index">
             <div class="card-content">
                 <p class="flow-text">Seit über 20 Jahren sind wir in der Veranstaltungsbranche in der Ostschweiz tätig.
                     Gerne unterstützen wir Sie mit unserer Erfahrung bei der Planung ihres Anlasses und tragen so zu
@@ -68,7 +83,7 @@
             </div>
         </div>
 
-        <div class="card">
+        <div class="card card-index">
             <div class="card-image">
                 <img src="{% static 'tent/images/Zelt Wald.jpg' %}">
                 <h2 class="card-title">Spontanität</h2>

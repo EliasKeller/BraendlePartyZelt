@@ -1,8 +1,25 @@
 {% extends 'tent/base.html' %}
 {% load material_form %}
+{% load static %}
 {% block title %}Partyzelte{% endblock %}
 {% block partyTent_active %}active{% endblock %}
+
 {% block body %}
+
+    {% comment %}Parallax{% endcomment %}
+    <div id="parallax-partytent" class="parallax-container">
+        <div class="parallax"><img src="{% static 'tent/images/paralla -small.jpg' %}">
+            <div class="container-animated-arrow">
+                <div class="chevron chevron-partytent"></div>
+                <div class="chevron chevron-partytent"></div>
+                <div class="chevron chevron-partytent"></div>
+            </div>
+            <div id="background-partytent">
+                <h1>Partyzelte</h1>
+            </div>
+
+        </div>
+    </div>
 
     <div class="row">
         <h2>Zelte</h2>

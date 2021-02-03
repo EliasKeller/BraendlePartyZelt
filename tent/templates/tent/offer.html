@@ -1,10 +1,23 @@
 {% extends 'tent/base.html' %}
 {% load material_form %}
+{% load static %}
 {% block title %}Offerte/Anfrage{% endblock %}
 {% block offer_active %}active{% endblock %}
 
 {% block body %}
-    <h1>Offerte/Anfrage</h1>
+    <div id="parallax-offer" class="parallax-container">
+        <div class="parallax"><img src="{% static 'tent/images/paralla -small.jpg' %}">
+            <div class="container-animated-arrow">
+                <div class="chevron chevron-partytent"></div>
+                <div class="chevron chevron-partytent"></div>
+                <div class="chevron chevron-partytent"></div>
+            </div>
+            <div id="background-offer">
+                <h1>Anfrage</h1>
+            </div>
+        </div>
+    </div>
+
     <p class="flow-text">Haben wir Ihr Interesse geweckt? Zögern Sie nicht, uns zu kontaktieren. Senden Sie uns mit
         untenstehendem Kontaktformular die Angaben zu Ihrem Festanlass. Sehr gerne senden wir Ihnen eine unverbindliche
         Offerte zu.</p>

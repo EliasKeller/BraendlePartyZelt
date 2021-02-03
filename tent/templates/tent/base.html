@@ -16,23 +16,24 @@
     <link rel="stylesheet" type="text/css" href="{% static 'tent/cardStyle.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'tent/offer.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'tent/partyTent.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'tent/aboutMe.css' %}">
 </head>
 <body>
 
 {% comment %}Header{% endcomment %}
 <nav>
-    <div class="nav-wrapper blue lighten-2">
-        <a href="{% url 'tent:index' %}" class="brand-logo">
-            <img src="{% static 'tent/images/Brändle Partyzelt Logo.png' %}" alt="Brändle Partyzelt">
-        </a>
+    <div class="nav-wrapper">
         <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li class="{% block partyTent_active %}{% endblock %}"><a
+                    class="nav_font_dark"
                     href="{% url 'tent:party_tent_search' %}">Festzelt</a>
             </li>
-            <li class="{% block equipment_active %}{% endblock %}"><a href="{% url 'tent:equipment' %}">Zubehör</a></li>
-            <li class="{% block offer_active %}{% endblock %}"><a href="{% url 'tent:offer' %}">Offerte/Anfrage</a></li>
-            <li><a href="#">Über uns</a></li>
+            <li class="{% block equipment_active %}{% endblock %}"><a class="nav_font_dark"
+                                                                      href="{% url 'tent:equipment' %}">Zubehör</a></li>
+            <li class="{% block offer_active %}{% endblock %}"><a class="nav_font_dark" href="{% url 'tent:offer' %}">Kontakt</a>
+            </li>
+            <li class="{% block aboutMe_active %}{% endblock %}"><a class="nav_font_dark" href="{% url 'tent:about_me' %}">Über uns</a></li>
         </ul>
     </div>
 </nav>
@@ -50,18 +51,6 @@
     <li><a href="#">Über uns</a></li>
 </ul>
 
-{% comment %}Parallax{% endcomment %}
-<div id="parallax-base" class="parallax-container">
-    <div class="parallax"><img src="{% static 'tent/images/parallax.jpg' %}">
-        <div class="container-animated-arrow">
-            <div class="chevron"></div>
-            <div class="chevron"></div>
-            <div class="chevron"></div>
-        </div>
-    </div>
-</div>
-
-
 {% comment %}Main-Content{% endcomment %}
 <main>
     {% block body %}
@@ -76,16 +65,17 @@
 </div>
 
 {% comment %}Footer{% endcomment %}
-<footer class="page-footer blue lighten-2">
+<footer class="page-footer">
     <div class="container">
         <div class="row footer-row">
-            <div class="col l6 s12 footer-logo">
-                <img src="{% static 'tent/images/Brändle Partyzelt Logo.png' %}" alt="Brändle Partyzelt">
+            <div id="footer-logo" class="col l6 s12">
+                <img src="{% static 'tent/images/Zeichnung.svg' %}" alt="Brändle Partyzelt">
             </div>
-            <div class="col l4 offset-l2 s12 footer-nav">
+            <div id="footer-nav" class="col l4 offset-l2 s12">
                 <h5 class="white-text">Navigation</h5>
                 <ul>
-                    <li><a class="grey-text text-lighten-3" href="{% url 'tent:party_tent_search' %}">Festzelt</a></li>
+                    <li><a class="grey-text text-lighten-3" href="{% url 'tent:party_tent_search' %}">Festzelt</a>
+                    </li>
                     <li><a class="grey-text text-lighten-3" href="{% url 'tent:equipment' %}">Zubehör</a></li>
                     <li><a class="grey-text text-lighten-3" href="{% url 'tent:offer' %}">Offerte/Anfrage</a></li>
                     <li><a class="grey-text text-lighten-3" href="#">Über uns</a></li>
@@ -104,6 +94,12 @@
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 {% include 'material/includes/material_js.html' %}
 <script>
+    $(window).scroll(function () {
+        $('nav').toggleClass('scrolled', $(this).scrollTop() > 200);
+        $('.nav_font_dark').toggleClass('bright', $(this).scrollTop() > 200);
+    });
+</script>
+<script>
 
     $(document).ready(function () {
         $('.sidenav').sidenav();
@@ -115,7 +111,6 @@
     });
 
     AOS.init();
-
 </script>
 </body>
 </html>
