@@ -61,6 +61,12 @@ nav.scrolled {
     font-size: 3vw;
 }
 
+.sidenav-trigger {
+    height: 100% !important;
+    display: flex;
+    align-items: center;
+}
+
 .mobile-nav-active:active {
     color: #00B69E;
 }
@@ -75,6 +81,11 @@ nav.scrolled {
     justify-content: center;
     align-items: center;
     height: 100%;
+    background: #8aa5d0;
+}
+
+.mobile-logo-container > img {
+    height: 80%;
 }
 
 #parallax-base {
