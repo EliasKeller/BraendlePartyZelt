@@ -39,6 +39,24 @@ nav.scrolled {
     color: white;
 }
 
+.nav_logo_center {
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#nav_logo_center_img {
+    height: 80%;
+    visibility: hidden;
+}
+
+#nav_logo_center_img.visible {
+    visibility: visible;
+}
+
 .logo_container_center {
     position: absolute;
     z-index: 100;

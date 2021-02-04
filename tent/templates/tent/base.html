@@ -24,24 +24,32 @@
 <nav>
     <div class="nav-wrapper">
         <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <div class="nav_logo_center">
+            <img id="nav_logo_center_img" src="{% static 'tent/images/Zeichnung.svg' %}" alt="Brändle Partyzelt">
+        </div>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li class="{% block partyTent_active %}{% endblock %}"><a
                     class="nav_font_dark"
                     href="{% url 'tent:party_tent_search' %}">Festzelt</a>
             </li>
             <li class="{% block equipment_active %}{% endblock %}"><a class="nav_font_dark"
-                                                                      href="{% url 'tent:equipment' %}">Zubehör</a></li>
-            <li class="{% block offer_active %}{% endblock %}"><a class="nav_font_dark" href="{% url 'tent:offer' %}">Kontakt</a>
+                                                                      href="{% url 'tent:equipment' %}">Zubehör</a>
             </li>
-            <li class="{% block aboutMe_active %}{% endblock %}"><a class="nav_font_dark" href="{% url 'tent:about_me' %}">Über mich</a></li>
+            <li class="{% block offer_active %}{% endblock %}"><a class="nav_font_dark"
+                                                                  href="{% url 'tent:offer' %}">Kontakt</a>
+            </li>
+            <li class="{% block aboutMe_active %}{% endblock %}"><a class="nav_font_dark"
+                                                                    href="{% url 'tent:about_me' %}">Über mich</a>
+            </li>
         </ul>
+
     </div>
 </nav>
 
 {% comment %}Mobile Menu{% endcomment %}
 <ul id="slide-out" class="sidenav">
     <li class="blue lighten-2 mobile-logo">
-        <div class="background mobile-logo-container"  href="{% url 'tent:index' %}">
+        <div class="background mobile-logo-container" href="{% url 'tent:index' %}">
             <img src="{% static 'tent/images/Zeichnung.svg' %}" alt="Brändle Partyzelt">
         </div>
     </li>
@@ -97,6 +105,7 @@
     $(window).scroll(function () {
         $('nav').toggleClass('scrolled', $(this).scrollTop() > 200);
         $('.nav_font_dark').toggleClass('bright', $(this).scrollTop() > 200);
+        $('#nav_logo_center_img').toggleClass('visible', $(this).scrollTop() > 200);
     });
 </script>
 <script>
