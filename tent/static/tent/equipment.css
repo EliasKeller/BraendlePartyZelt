@@ -21,11 +21,12 @@
     font-size: 7vh;
 }
 
-#equipment-content{
+#equipment-content {
     height: 100%;
     width: 100%;
     display: flex;
 }
+
 #equipment-container {
     display: flex;
     align-items: center;
@@ -66,7 +67,7 @@
     border-left: 3px solid #00B69E;
 }
 
-.left-text-alignment{
+.left-text-alignment {
     text-align: left;
 }
 
@@ -97,5 +98,12 @@
 @media screen and (max-width: 820px) {
     #parallax-equipment {
         margin: 0px -15px 0px -15px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .title-small {
+        font-size: 2rem;
+        font-weight: bold;
     }
 }
