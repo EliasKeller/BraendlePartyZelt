@@ -6,7 +6,7 @@
 {% block body %}
 
     <div id="parallax-equipment" class="parallax-container">
-        <div class="parallax"><img src="{% static 'tent/images/parallax - header small.jpg' %}">
+        <div class="parallax"><img src="{% static 'tent/images/parallax - riesen Zelt.jpg' %}">
             <div class="container-animated-arrow">
                 <div class="chevron chevron-partytent"></div>
                 <div class="chevron chevron-partytent"></div>
@@ -25,8 +25,7 @@
             <div id="inventory" class="col s10 scrollspy">
                 <h2 class="left-text-alignment title-small">Festbankgarnituren</h2>
                 <p class="flow-text left-text-alignment">Für Ihre Gäste bieten wir mit unseren Festbankgarnituren
-                    Sitzgelegenheiten in Ihrem Festzelt. Die breiteren Tische eignen sich hervorragend für ein Bankett,
-                    da genügend Platz auf dem Tisch ist. Kontaktieren Sie uns für individuellen Wünsche.</p>
+                    Sitzgelegenheiten in Ihrem Festzelt. Die breiteren Tische eignen sich hervorragend für ein Bankett.
                 {% for equipment in equipment_list %}
                     {% if equipment.type == 0 %}
                         <div class="col s12 m6 l4" data-aos="fade-up">

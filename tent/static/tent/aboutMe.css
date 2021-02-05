@@ -8,7 +8,6 @@
     top: 40vh;
     height: 15vh;
     width: 100vw;
-    background: #8aa5d0c9;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -16,8 +15,9 @@
 
 #background-aboutMe > h1 {
     margin: 0;
-    color: white;
-    font-size: 7vh;
+    color: black;
+    font-size: 13vh;
+    font-weight: bold;
 }
 
 iframe {
@@ -50,6 +50,10 @@ iframe {
 }
 
 @media screen and (max-width: 820px) {
+    #background-aboutMe > h1 {
+        font-size: 8vh;
+    }
+
     #parallax-aboutMe {
         margin: 0px -15px 0px -15px;
     }

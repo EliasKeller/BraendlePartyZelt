@@ -49,6 +49,10 @@ nav.scrolled {
     z-index: -1;
 }
 
+.sidenav {
+    background: #e2e3e7;
+}
+
 #nav_logo_center_img {
     height: 80%;
     visibility: hidden;
