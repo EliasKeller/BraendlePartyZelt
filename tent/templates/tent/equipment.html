@@ -26,198 +26,197 @@
                 <h2 class="left-text-alignment title-small">Festbankgarnituren</h2>
                 <p class="flow-text left-text-alignment">Für Ihre Gäste bieten wir mit unseren Festbankgarnituren
                     Sitzgelegenheiten in Ihrem Festzelt. Die breiteren Tische eignen sich hervorragend für ein Bankett.
-                {% for equipment in equipment_list %}
-                    {% if equipment.type == 0 %}
-                        <div class="col s12 m6 l4" data-aos="fade-up">
-                            <div class="card">
-                                <div class="card-image waves-effect waves-block waves-light">
-                                    <img class="activator" src="{{ equipment.equipment_image.url }}">
-                                </div>
-                                <div class="card-content">
+                    {% for equipment in equipment_list %}
+                        {% if equipment.type == 0 %}
+                            <div class="col s12 m6 l4" data-aos="fade-up">
+                                <div class="card">
+                                    <div class="card-image waves-effect waves-block waves-light">
+                                        <img class="activator" src="{{ equipment.equipment_image.url }}">
+                                    </div>
+                                    <div class="card-content">
                         <span class="card-title activator grey-text text-darken-4">{{ equipment.get_type_display }}<i
                                 class="material-icons right">expand_less</i></span>
-                                </div>
-                                <div class="card-reveal">
+                                    </div>
+                                    <div class="card-reveal">
                             <span class="card-title grey-text text-darken-4">{{ equipment.designation }}<i
                                     class="material-icons right">close</i></span>
-                                    <p>Grösse/Leistung: {{ equipment.size_Or_Power }}</p>
-                                    <p>abgeholgt: {{ equipment.price_fetched }} Fr.</p>
-                                    <p>geliefert: {{ equipment.price_delivered }} Fr.</p>
-                                </div>
+                            <p>Grösse/Leistung: {{ equipment.size_Or_Power }}</p>
+                            <p>abgeholgt: {{ equipment.price_fetched }} Fr.</p>
+                            <p>geliefert: {{ equipment.price_delivered }} Fr.</p>
                             </div>
-                        </div>
-                    {% endif %}
-                {% endfor %}
-            </div>
-
-            {% comment %}floor-equipments-cards{% endcomment %}
-            <div id="floor" class="col s10 scrollspy">
-                <h2 class="left-text-alignment title-small">Boden</h2>
-                <p class="flow-text left-text-alignment">Um Ihren Anlass auch auf einer Grasfläche oder in unebenem
-                    Gelände durchführen zu
-                    können, bieten wir Ihnen unseren Holzboden an. Wir bauen Ihnen einen geraden Untergrund und gehen
-                    auf ihre individuellen Wünsche ein. (Bühne, rollstuhlgängige Rampe, etc.)</p>
-                {% for equipment in equipment_list %}
-                    {% if equipment.type == 1 %}
-                        <div class="col s12 m6 l4" data-aos="fade-up">
-                            <div class="card">
-                                <div class="card-image waves-effect waves-block waves-light">
-                                    <img class="activator" src="{{ equipment.equipment_image.url }}">
-                                </div>
-                                <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4">{{ equipment.get_type_display }}<i
-                                class="material-icons right">expand_less</i></span>
-                                </div>
-                                <div class="card-reveal">
-                            <span class="card-title grey-text text-darken-4">{{ equipment.designation }}<i
-                                    class="material-icons right">close</i></span>
-                                    <p>Grösse/Leistung: {{ equipment.size_Or_Power }}</p>
-                                    <p>abgeholgt: {{ equipment.price_fetched }} Fr.</p>
-                                    <p>geliefert: {{ equipment.price_delivered }} Fr.</p>
-                                </div>
                             </div>
-                        </div>
-                    {% endif %}
-                {% endfor %}
-            </div>
-
-            {% comment %}heater-equipments-cards{% endcomment %}
-            <div id="heater" class="col s10 scrollspy">
-                <h2 class="left-text-alignment title-small">Heizung</h2>
-                <p class="flow-text left-text-alignment">Sie müssen nicht frieren! Bei unseren unterschiedlichen
-                    Heizungsmöglichkeiten
-                    finden Sie bestimmt die perfekte Lösung für Ihren Anlass. Auch hier beraten wir Sie gerne, welche
-                    Anlage für Ihr Zelt geeignet ist.</p>
-                {% for equipment in equipment_list %}
-                    {% if equipment.type == 3 %}
-                        <div class="col s12 m6 l4" data-aos="fade-up">
-                            <div class="card">
-                                <div class="card-image waves-effect waves-block waves-light">
-                                    <img class="activator" src="{{ equipment.equipment_image.url }}">
-                                </div>
-                                <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4">{{ equipment.get_type_display }}<i
-                                class="material-icons right">expand_less</i></span>
-                                </div>
-                                <div class="card-reveal">
-                            <span class="card-title grey-text text-darken-4">{{ equipment.designation }}<i
-                                    class="material-icons right">close</i></span>
-                                    <p>Grösse/Leistung: {{ equipment.size_Or_Power }}</p>
-                                    <p>abgeholgt: {{ equipment.price_fetched }} Fr.</p>
-                                    <p>geliefert: {{ equipment.price_delivered }} Fr.</p>
-                                </div>
                             </div>
-                        </div>
-                    {% endif %}
-                {% endfor %}
-            </div>
-
-            {% comment %}bouncy_castle-equipments-cards{% endcomment %}
-            <div id="bouncy-castle" class="col s10 scrollspy">
-                <h2 class="left-text-alignment title-small">Hüpfburg</h2>
-                <p class="flow-text left-text-alignment">Bieten Sie Ihren kleinen Gästen beim nächsten Geschäftsanlass,
-                    Vereinsanlass oder
-                    Geburtstagsfeier eine Unterhaltungsmöglichkeit, die Ihnen in Erinnerung bleibt. Mit unseren
-                    Hüpfburgen in verschieden Grössen ist der Spass garantiert!</p>
-                {% for equipment in equipment_list %}
-                    {% if equipment.type == 3 %}
-                        <div class="col s12 m6 l4" data-aos="fade-up">
-                            <div class="card">
-                                <div class="card-image waves-effect waves-block waves-light">
-                                    <img class="activator" src="{{ equipment.equipment_image.url }}">
-                                </div>
-                                <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4">{{ equipment.get_type_display }}<i
-                                class="material-icons right">expand_less</i></span>
-                                </div>
-                                <div class="card-reveal">
-                            <span class="card-title grey-text text-darken-4">{{ equipment.designation }}<i
-                                    class="material-icons right">close</i></span>
-                                    <p>Grösse/Leistung: {{ equipment.size_Or_Power }}</p>
-                                    <p>abgeholgt: {{ equipment.price_fetched }} Fr.</p>
-                                    <p>geliefert: {{ equipment.price_delivered }} Fr.</p>
-                                </div>
-                            </div>
-                        </div>
-                    {% endif %}
-                {% endfor %}
-            </div>
-
-            {% comment %}bouncy_castle-equipments-cards{% endcomment %}
-            <div id="bar" class="col s10 scrollspy">
-                <h2 class="left-text-alignment title-small">Bar</h2>
-                <p class="flow-text left-text-alignment">Für Ihren Hochzeitsapéro oder Business-Lunch stellen wir Ihnen
-                    verschiedene Bartische zur Verfügung. Wählen Sie zudem unsere Barelemente, die sich problemlos
-                    kombinieren lassen, um Ihre Besucher mit feinen Drinks zu verköstigen.</p>
-                {% for equipment in equipment_list %}
-                    {% if equipment.type == 10 %}
-                        <div class="col s12 m6 l4" data-aos="fade-up">
-                            <div class="card">
-                                <div class="card-image waves-effect waves-block waves-light">
-                                    <img class="activator" src="{{ equipment.equipment_image.url }}">
-                                </div>
-                                <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4">{{ equipment.get_type_display }}<i
-                                class="material-icons right">expand_less</i></span>
-                                </div>
-                                <div class="card-reveal">
-                            <span class="card-title grey-text text-darken-4">{{ equipment.designation }}<i
-                                    class="material-icons right">close</i></span>
-                                    <p>Grösse/Leistung: {{ equipment.size_Or_Power }}</p>
-                                    <p>abgeholgt: {{ equipment.price_fetched }} Fr.</p>
-                                    <p>geliefert: {{ equipment.price_delivered }} Fr.</p>
-                                </div>
-                            </div>
-                        </div>
-                    {% endif %}
-                {% endfor %}
-            </div>
-
-            {% comment %}bouncy_castle-equipments-cards{% endcomment %}
-            <div id="various" class="col s10 scrollspy">
-                <h2 class="left-text-alignment title-small">Diverses</h2>
-                <p class="flow-text left-text-alignment">Wir bieten Ihnen diverses zusätzliches Festinventar an. Unter
-                    anderem Türen zu den Zelten, um den Notausgangsvorschriften gerecht zu werden.
-                    Benötigen Sie zusätzliches Material? Nehmen Sie mit uns Kontakt auf.
-                </p>
-                {% for equipment in equipment_list %}
-                    {% if equipment.type == 10 %}
-                        <div class="col s12 m6 l4" data-aos="fade-up">
-                            <div class="card">
-                                <div class="card-image waves-effect waves-block waves-light">
-                                    <img class="activator" src="{{ equipment.equipment_image.url }}">
-                                </div>
-                                <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4">{{ equipment.get_type_display }}<i
-                                class="material-icons right">expand_less</i></span>
-                                </div>
-                                <div class="card-reveal">
-                            <span class="card-title grey-text text-darken-4">{{ equipment.designation }}<i
-                                    class="material-icons right">close</i></span>
-                                    <p>Grösse/Leistung: {{ equipment.size_Or_Power }}</p>
-                                    <p>abgeholgt: {{ equipment.price_fetched }} Fr.</p>
-                                    <p>geliefert: {{ equipment.price_delivered }} Fr.</p>
-                                </div>
-                            </div>
-                        </div>
-                    {% endif %}
-                {% endfor %}
-            </div>
-        </div>
-
-
-        {% comment %}scrollspy{% endcomment %}
-        <div id="scrollspy" class="col hide-on-med-and-down l2">
-            <ul class="section table-of-contents scrollspy-positioning">
-                <li><a href="#inventory">Festbankgarnituren</a></li>
-                <li><a href="#floor">Boden</a></li>
-                <li><a href="#heater">Heizung</a></li>
-                <li><a href="#bouncy-castle">Hüpfburg</a></li>
-                <li><a href="#bar">Bar</a></li>
-                <li><a href="#various">Diverses</a></li>
-            </ul>
-        </div>
-
+                        {% endif %}
+                    {% endfor %}
     </div>
+
+    {% comment %}bar{% endcomment %}
+    <div id="bar" class="col s10 scrollspy">
+        <h2 class="left-text-alignment title-small">Bar</h2>
+        <p class="flow-text left-text-alignment">Für Ihren Hochzeitsapéro oder Business-Lunch stellen wir Ihnen
+            verschiedene Bartische zur Verfügung. Wählen Sie zudem unsere Barelemente, die sich problemlos
+            kombinieren lassen, um Ihre Besucher mit feinen Drinks zu verköstigen.</p>
+        {% for equipment in equipment_list %}
+            {% if equipment.type == 10 %}
+                <div class="col s12 m6 l4" data-aos="fade-up">
+                    <div class="card">
+                        <div class="card-image waves-effect waves-block waves-light">
+                            <img class="activator" src="{{ equipment.equipment_image.url }}">
+                        </div>
+                        <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">{{ equipment.get_type_display }}<i
+                                class="material-icons right">expand_less</i></span>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">{{ equipment.designation }}<i
+                                    class="material-icons right">close</i></span>
+                            <p>Grösse/Leistung: {{ equipment.size_Or_Power }}</p>
+                            <p>abgeholgt: {{ equipment.price_fetched }} Fr.</p>
+                            <p>geliefert: {{ equipment.price_delivered }} Fr.</p>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+
+    {% comment %}floor-equipments-cards{% endcomment %}
+    <div id="floor" class="col s10 scrollspy">
+        <h2 class="left-text-alignment title-small">Boden</h2>
+        <p class="flow-text left-text-alignment">Um Ihren Anlass auch auf einer Grasfläche oder in unebenem
+            Gelände durchführen zu
+            können, bieten wir Ihnen unseren Holzboden an. Wir bauen Ihnen einen geraden Untergrund und gehen
+            auf ihre individuellen Wünsche ein. (Bühne, rollstuhlgängige Rampe, etc.)</p>
+        {% for equipment in equipment_list %}
+            {% if equipment.type == 1 %}
+                <div class="col s12 m6 l4" data-aos="fade-up">
+                    <div class="card">
+                        <div class="card-image waves-effect waves-block waves-light">
+                            <img class="activator" src="{{ equipment.equipment_image.url }}">
+                        </div>
+                        <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">{{ equipment.get_type_display }}<i
+                                class="material-icons right">expand_less</i></span>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">{{ equipment.designation }}<i
+                                    class="material-icons right">close</i></span>
+                            <p>Grösse/Leistung: {{ equipment.size_Or_Power }}</p>
+                            <p>abgeholgt: {{ equipment.price_fetched }} Fr.</p>
+                            <p>geliefert: {{ equipment.price_delivered }} Fr.</p>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+
+    {% comment %}heater-equipments-cards{% endcomment %}
+    <div id="heater" class="col s10 scrollspy">
+        <h2 class="left-text-alignment title-small">Heizung</h2>
+        <p class="flow-text left-text-alignment">Sie müssen nicht frieren! Bei unseren unterschiedlichen
+            Heizungsmöglichkeiten
+            finden Sie bestimmt die perfekte Lösung für Ihren Anlass. Auch hier beraten wir Sie gerne, welche
+            Anlage für Ihr Zelt geeignet ist.</p>
+        {% for equipment in equipment_list %}
+            {% if equipment.type == 3 %}
+                <div class="col s12 m6 l4" data-aos="fade-up">
+                    <div class="card">
+                        <div class="card-image waves-effect waves-block waves-light">
+                            <img class="activator" src="{{ equipment.equipment_image.url }}">
+                        </div>
+                        <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">{{ equipment.get_type_display }}<i
+                                class="material-icons right">expand_less</i></span>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">{{ equipment.designation }}<i
+                                    class="material-icons right">close</i></span>
+                            <p>Grösse/Leistung: {{ equipment.size_Or_Power }}</p>
+                            <p>abgeholgt: {{ equipment.price_fetched }} Fr.</p>
+                            <p>geliefert: {{ equipment.price_delivered }} Fr.</p>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+
+    {% comment %}bouncy_castle-equipments-cards{% endcomment %}
+    <div id="bouncy-castle" class="col s10 scrollspy">
+        <h2 class="left-text-alignment title-small">Hüpfburg</h2>
+        <p class="flow-text left-text-alignment">Bieten Sie Ihren kleinen Gästen beim nächsten Geschäftsanlass,
+            Vereinsanlass oder
+            Geburtstagsfeier eine Unterhaltungsmöglichkeit, die Ihnen in Erinnerung bleibt. Mit unseren
+            Hüpfburgen in verschieden Grössen ist der Spass garantiert!</p>
+        {% for equipment in equipment_list %}
+            {% if equipment.type == 3 %}
+                <div class="col s12 m6 l4" data-aos="fade-up">
+                    <div class="card">
+                        <div class="card-image waves-effect waves-block waves-light">
+                            <img class="activator" src="{{ equipment.equipment_image.url }}">
+                        </div>
+                        <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">{{ equipment.get_type_display }}<i
+                                class="material-icons right">expand_less</i></span>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">{{ equipment.designation }}<i
+                                    class="material-icons right">close</i></span>
+                            <p>Grösse/Leistung: {{ equipment.size_Or_Power }}</p>
+                            <p>abgeholgt: {{ equipment.price_fetched }} Fr.</p>
+                            <p>geliefert: {{ equipment.price_delivered }} Fr.</p>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+
+    {% comment %}bouncy_castle-equipments-cards{% endcomment %}
+    <div id="various" class="col s10 scrollspy">
+        <h2 class="left-text-alignment title-small">Diverses</h2>
+        <p class="flow-text left-text-alignment">Wir bieten Ihnen diverses zusätzliches Festinventar an. Unter
+            anderem Türen zu den Zelten, um den Notausgangsvorschriften gerecht zu werden.
+            Benötigen Sie zusätzliches Material? Nehmen Sie mit uns Kontakt auf.
+        </p>
+        {% for equipment in equipment_list %}
+            {% if equipment.type == 10 %}
+                <div class="col s12 m6 l4" data-aos="fade-up">
+                    <div class="card">
+                        <div class="card-image waves-effect waves-block waves-light">
+                            <img class="activator" src="{{ equipment.equipment_image.url }}">
+                        </div>
+                        <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">{{ equipment.get_type_display }}<i
+                                class="material-icons right">expand_less</i></span>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">{{ equipment.designation }}<i
+                                    class="material-icons right">close</i></span>
+                            <p>Grösse/Leistung: {{ equipment.size_Or_Power }}</p>
+                            <p>abgeholgt: {{ equipment.price_fetched }} Fr.</p>
+                            <p>geliefert: {{ equipment.price_delivered }} Fr.</p>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+    </div>
+
+
+    {% comment %}scrollspy{% endcomment %}
+    <div id="scrollspy" class="col hide-on-med-and-down l2">
+        <ul class="section table-of-contents scrollspy-positioning">
+            <li><a href="#inventory">Festbankgarnituren</a></li>
+            <li><a href="#bar">Bar</a></li>
+            <li><a href="#floor">Boden</a></li>
+            <li><a href="#heater">Heizung</a></li>
+            <li><a href="#bouncy-castle">Hüpfburg</a></li>
+            <li><a href="#various">Diverses</a></li>
+        </ul>
+    </div>
+
 
 {% endblock %}

@@ -46,6 +46,7 @@
     top: 65px;
     right: 0px;
     float: right;
+    font-size: 1.9rem;
 }
 
 #scrollspy > ul {
@@ -54,6 +55,10 @@
 
 #scrollspy > ul > li > a {
     font-weight: bold;
+    height: 1.9rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
 }
 
 #scrollspy > ul > li > a:hover {

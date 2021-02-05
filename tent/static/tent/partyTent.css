@@ -32,10 +32,6 @@
     margin-bottom: 15px;
 }
 
-.flow-text-small {
-    font-size: 1.1rem;
-}
-
 @media screen and (max-width: 1645px) {
     #parallax-partytent {
         margin: 0px -150px 0px -150px;
