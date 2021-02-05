@@ -26,16 +26,22 @@
         {% form form=form %}
             {% part form.first_name prefix %}<i class="material-icons prefix prefix-icon">face</i>{% endpart %}
             {% part form.last_name prefix %}<i class="material-icons prefix prefix-icon">face</i>{% endpart %}
+            {% part form.street prefix %}<i class="material-icons prefix prefix-icon">my_location</i>{% endpart %}
+            {% part form.plz prefix %}<i class="material-icons prefix prefix-icon">my_location</i>{% endpart %}
+            {% part form.place prefix %}<i class="material-icons prefix prefix-icon">my_location</i>{% endpart %}
             {% part form.phone prefix %}<i class="material-icons prefix prefix-icon">phone</i>{% endpart %}
             {% part form.phone_mobile prefix %}<i class="material-icons prefix prefix-icon">phone</i>{% endpart %}
-            {% part form.fax prefix %}<i class="material-icons prefix prefix-icon">print</i>{% endpart %}
+            {% part form.event prefix %}<i class="material-icons prefix prefix-icon">festival</i>{% endpart %}
             {% part form.email prefix %}<i class="material-icons prefix prefix-icon">mail</i>{% endpart %}
             {% part form.date_of_event prefix %}<i class="material-icons prefix prefix-icon">insert_invitation</i>
             {% endpart %}
+            {% part form.plz_of_event prefix %}<i class="material-icons prefix prefix-icon">my_location</i>{% endpart %}
+            {% part form.place_of_event prefix %}<i class="material-icons prefix prefix-icon">my_location</i>{% endpart %}
             {% part form.date_of_installation prefix %}
                 <i class="material-icons prefix prefix-icon">insert_invitation</i>{% endpart %}
             {% part form.date_of_destruction prefix %}<i class="material-icons prefix prefix-icon">insert_invitation</i>
             {% endpart %}
+            {% part form.description prefix %}<i class="material-icons prefix prefix-icon">description</i>{% endpart %}
         {% endform %}
         <button type="submit" class="btn waves-effect waves-light btn-success btn-absenden">Absenden<i
                 class="material-icons right">send</i></button>

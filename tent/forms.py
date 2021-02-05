@@ -11,23 +11,23 @@ class OfferForm(forms.Form):
     phone = forms.IntegerField(required=False, label='Telefon')
     phone_mobile = forms.IntegerField(required=True, label='Mobil')
     email = forms.EmailField(required=True, label='E-Mail')
-    fax = forms.IntegerField(required=False)
+    event = forms.CharField(required=False, max_length=250, label="Anlass")
     date_of_event = forms.DateField(required=True, label='Datum des Anlasses')
     plz_of_event = forms.IntegerField(required=True, label="PLZ Montageort")
     place_of_event = forms.CharField(required=True, max_length=250, label="Montageort")
-    date_of_installation = forms.DateField(required=False, label='Aufbau ab')
+    date_of_installation = forms.DateField(required=False, label='Aufbau bis')
     date_of_destruction = forms.DateField(required=False, label='Abbau ab')
-    comment = forms.CharField(required=False, max_length=500, label='Bemerkung')
+    description = forms.CharField(required=False, max_length=500, label='Beschreibung')
 
     layout = Layout(
         Row('first_name', 'last_name'),
         'street',
         Row('plz', Span3('place')),
         Row('phone', 'phone_mobile'),
-        Row('email', 'fax'),
-        'date_of_event',
+        'email',
+        Row('event','date_of_event'),
         Row('plz_of_event', Span3('place_of_event')),
         Row('date_of_installation', 'date_of_destruction'),
-        'comment',
+        'description',
     )
 
