@@ -148,6 +148,11 @@ footer {
     main {
         padding: 0px 90px 50px 90px;
     }
+
+    .nav_logo_center{
+        justify-content: flex-start;
+        margin-left: 12px;
+    }
 }
 
 @media screen and (max-width: 1290px) {
@@ -156,6 +161,12 @@ footer {
     }
 }
 
+@media screen and (max-width: 1000px) {
+    .nav_logo_center{
+        justify-content: center;
+        margin-left: 0;
+    }
+}
 
 @media screen and (max-width: 990px) {
     main {

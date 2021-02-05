@@ -13,6 +13,9 @@ class TentType(enum.Enum):
         PAGODENZELT: 'Pagodenzelt'
     }
 
+    def __str__(self):
+        return self.get_type_display()
+
 
 class Tent(models.Model):
     type = enum.EnumField(TentType, default=TentType.FESTZELT)
@@ -23,25 +26,29 @@ class Tent(models.Model):
     tent_image = models.FileField(null=True)
 
     def __str__(self):
-        return self.get_type_display()
+        return self.width.__str__() + ' x ' + self.length.__str__()
 
 
 class EquipmentType(enum.Enum):
-    INVENTORY = 0
-    FLOOR = 1
-    HEATER = 2
-    BOUNCY_CASTLE = 3
+    BANQUET_SET = 0
+    BAR = 1
+    FLOOR = 2
+    HEATER = 3
+    BOUNCY_CASTLE = 4
+    VARIOUS = 5
 
     labels = {
-        INVENTORY: 'Inventar',
+        BANQUET_SET: 'Festbankgarnitur',
+        BAR: 'Bar',
         FLOOR: 'Boden',
         HEATER: 'Heizung',
         BOUNCY_CASTLE: 'Hüpfburg',
+        VARIOUS: 'Diverses'
     }
 
 
 class Equipment(models.Model):
-    type = enum.EnumField(EquipmentType, default=EquipmentType.INVENTORY)
+    type = enum.EnumField(EquipmentType, default=EquipmentType.BANQUET_SET)
     designation = models.CharField(max_length=250)
     size_Or_Power = models.CharField(max_length=250)
     price_fetched = models.IntegerField()
@@ -49,4 +56,4 @@ class Equipment(models.Model):
     equipment_image = models.FileField(null=True)
 
     def __str__(self):
-        return self.get_type_display()
+        return self.designation + ' - ' + self.size_Or_Power
