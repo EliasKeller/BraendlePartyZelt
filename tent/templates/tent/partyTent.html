@@ -30,26 +30,36 @@
             enthalten. Zudem stehen wir Ihnen mit einem Montageleiter beim Auf- und Rückbau zur Seite. Zusätzliche
             Hilfspersonen werden vom Mieter gestellt.</p>
         <p class="flow-text">Falls keine Bodenanker möglich sind, wird gegen eine Aufwandsentschädigung
-        die
-        Sicherheit
-        mit Ballastierungen gewährleistet. </p>
-    <p class="flow-text">Gerne bieten wir Ihnen gegen eine Aufwandsentschädigung auch den Service an,
-        den
-        kompletten
-        Auf- und Rückbau durch uns erledigen zu lassen.</p>
+            die
+            Sicherheit
+            mit Ballastierungen gewährleistet. </p>
+        <p class="flow-text">Gerne bieten wir Ihnen gegen eine Aufwandsentschädigung auch den Service an,
+            den
+            kompletten
+            Auf- und Rückbau durch uns erledigen zu lassen.</p>
 
         {% comment %}        {% if all_tents %}{% endcomment %}
         <div>
-            <form class="search-form" method="get">
-                <div class="search-container">
-                    {{ filter.form.as_p }}
+            <form class="search-form" method="get" class="col s12">
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input id="first_name" type="text" class="validate" name="max_width">
+                        <label for="first_name">maximale Breite</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input id="last_name" type="text" class="validate" name="max_length">
+                        <label for="last_name">maximale Länge</label>
+                    </div>
                 </div>
+                {#                <div class="search-container">#}
+                {#                    {{ filter.form.as_p }}#}
+                {#                </div>#}
                 <div class="search-button-container">
                     <button type="submit" class="btn waves-effect waves-light btn-success btn-absenden">Suchen<i
                             class="material-icons right">search</i></button>
                 </div>
             </form>
-            {% for tent in filter.qs %}
+            {% for tent in queryset %}
                 <div class="col s12 m6 l4" data-aos="fade-up">
                     <div class="card">
                         <div class="card-image waves-effect waves-block waves-light">
