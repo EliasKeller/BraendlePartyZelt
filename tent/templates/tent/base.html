@@ -36,10 +36,10 @@
                                                                       href="{% url 'tent:equipment' %}">Zubehör</a>
             </li>
             <li class="{% block offer_active %}{% endblock %}"><a class="nav_font_dark"
-                                                                  href="{% url 'tent:offer' %}">Kontakt</a>
+                                                                  href="{% url 'tent:offer' %}">Anfrage</a>
             </li>
             <li class="{% block aboutMe_active %}{% endblock %}"><a class="nav_font_dark"
-                                                                    href="{% url 'tent:about_me' %}">Über mich</a>
+                                                                    href="{% url 'tent:about_me' %}">Über uns</a>
             </li>
         </ul>
 
@@ -55,8 +55,8 @@
     </li>
     <li><a href="{% url 'tent:party_tent_search' %}">Festzelt</a></li>
     <li><a href="{% url 'tent:equipment' %}">Zubehör</a></li>
-    <li><a href="{% url 'tent:offer' %}">Offerte/Anfrage</a></li>
-    <li><a href="#">Über uns</a></li>
+    <li><a href="{% url 'tent:offer' %}">Anfrage</a></li>
+    <li><a href="{% url 'tent:about_me' %}">Über uns</a></li>
 </ul>
 
 {% comment %}Main-Content{% endcomment %}
@@ -85,8 +85,8 @@
                     <li><a class="grey-text text-lighten-3" href="{% url 'tent:party_tent_search' %}">Festzelt</a>
                     </li>
                     <li><a class="grey-text text-lighten-3" href="{% url 'tent:equipment' %}">Zubehör</a></li>
-                    <li><a class="grey-text text-lighten-3" href="{% url 'tent:offer' %}">Offerte/Anfrage</a></li>
-                    <li><a class="grey-text text-lighten-3" href="#">Über uns</a></li>
+                    <li><a class="grey-text text-lighten-3" href="{% url 'tent:offer' %}">Anfrage</a></li>
+                    <li><a class="grey-text text-lighten-3" href="{% url 'tent:about_me' %}">Über uns</a></li>
                 </ul>
             </div>
         </div>
