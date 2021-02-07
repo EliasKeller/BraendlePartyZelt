@@ -43,17 +43,22 @@
             <form class="search-form" method="get" class="col s12">
                 <div class="row">
                     <div class="input-field col s6">
-                        <input id="first_name" type="text" class="validate" name="max_width">
+                        <input id="first_name" type="number" class="validate" name="max_width">
                         <label for="first_name">maximale Breite</label>
                     </div>
                     <div class="input-field col s6">
-                        <input id="last_name" type="text" class="validate" name="max_length">
+                        <input id="last_name" type="number" class="validate" name="max_length">
                         <label for="last_name">maximale Länge</label>
                     </div>
+                    <div class="input-field col s6">
+                        <input id="last_name" type="number" class="validate" name="min_persons">
+                        <label for="last_name">minimale Personenkapazität</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input id="last_name" type="number" class="validate" name="max_persons">
+                        <label for="last_name">maximale Personenkapazität</label>
+                    </div>
                 </div>
-                {#                <div class="search-container">#}
-                {#                    {{ filter.form.as_p }}#}
-                {#                </div>#}
                 <div class="search-button-container">
                     <button type="submit" class="btn waves-effect waves-light btn-success btn-absenden">Suchen<i
                             class="material-icons right">search</i></button>
@@ -72,7 +77,7 @@
                         <div class="card-reveal">
                             <span class="card-title grey-text text-darken-4">{{ tent.width }} m - {{ tent.length }} m {{ tent.get_type_display }}<i
                                     class="material-icons right">close</i></span>
-                            <p>ca. {{ tent.number_of_People }}</p>
+                            <p>ca. {{ tent.number_of_People }} Personen</p>
                             <p>{{ tent.price }} Fr.</p>
                         </div>
                     </div>

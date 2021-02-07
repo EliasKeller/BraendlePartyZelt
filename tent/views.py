@@ -7,13 +7,17 @@ from .filters import TentFilter
 def index(request):
     return render(request, 'tent/index.html')
 
+
 def is_valid_queryparam(param):
     return param != '' and param is not None
+
 
 def party_tent_search(request):
     party_tent_list = Tent.objects.filter(type=TentType.FESTZELT)
     max_width = request.GET.get('max_width')
     max_length = request.GET.get('max_length')
+    min_persons = request.GET.get('min_persons')
+    max_persons = request.GET.get('max_persons')
 
     if is_valid_queryparam(max_width):
         party_tent_list = party_tent_list.filter(width__lte=max_width)
@@ -21,9 +25,16 @@ def party_tent_search(request):
     if is_valid_queryparam(max_length):
         party_tent_list = party_tent_list.filter(length__lte=max_length)
 
+    if is_valid_queryparam(min_persons):
+        party_tent_list = party_tent_list.filter(number_of_People__gte=min_persons)
+
+    if is_valid_queryparam(max_persons):
+        party_tent_list = party_tent_list.filter(number_of_People__lte=max_persons)
+
     context = {
-        'queryset': party_tent_list
+        'queryset': party_tent_list,
     }
+
     return render(request, 'tent/partyTent.html', context)
 
 
