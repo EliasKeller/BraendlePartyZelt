@@ -17,24 +17,72 @@
         </div>
     </div>
 
-    <p class="flow-text">Bereits seit 1996 ist Armin Brändle in der Eventbranche aktiv. Angefangen mit der Vermietung
-        von kleinen Zelten mit Kapazitäten bis 300 Personen hat sich das Angebot stetig entwickelt. Im Jahr 2017 wurde
-        aus der Einzelfirma die Brändle Partyzelte GmbH gegründet. Von Mosnang aus beliefern wir die gesamte Region mit
-        Festinventar um zu gelungenen Anlässen beizutragen.</p>
-
-    <img src="{% static 'tent/images/carousel - Zelt Wiese.jpg' %}">
-
-    <iframe width="560" height="315"
-            src="https://www.tagblatt.ch/ostschweiz/toggenburg/partyzelt-vermieter-armin-braendle-das-erste-zelt-kaufte-er-mit-geliehenem-geld-ld.1155327"
-            frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
-    <div class="carousel">
-        <a class="carousel-item" href="#five!"><img src="{% static 'tent/images/carousel - Zelt Wiese.jpg' %}"></a>
-        <a class="carousel-item" href="#two!"><img src="{% static 'tent/images/carousel - Industrie.jpg' %}"></a>
-        <a class="carousel-item" href="#three!"><img src="{% static 'tent/images/carousel - Zelt Iddaburg.jpg' %}"></a>
-        <a class="carousel-item" href="#one!"><img src="{% static 'tent/images/carousel - riesen Zelt.jpg' %}"></a>
-        <a class="carousel-item" href="#four!"><img
-                src="{% static 'tent/images/carousel - Zelt Markthalle.jpeg' %}"></a>
+    <div class="row">
+        <div class="col s6 west">
+            <div class="card">
+                <div class="card-image">
+                    <img src="{% static 'tent/images/carousel - Zelt Iddaburg.jpg' %}">
+                </div>
+            </div>
+        </div>
+        <div class="col s6 card-front east">
+            <div class="card">
+                <div class="card-content">
+                    <h3 class="card-company-info-title">Brändle Partyzelte</h3>
+                    <p class="info-text">Bereits seit 1996 ist Armin Brändle in der Eventbranche aktiv. Angefangen mit
+                        der Vermietung
+                        von kleinen Zelten mit Kapazitäten bis 300 Personen hat sich das Angebot stetig entwickelt. Im
+                        Jahr 2017 wurde
+                        aus der Einzelfirma die Brändle Partyzelte GmbH gegründet. Von Mosnang aus beliefern wir die
+                        gesamte Region mit
+                        Festinventar um zu gelungenen Anlässen beizutragen.</p>
+                </div>
+            </div>
+        </div>
     </div>
 
+
+    <div class="row">
+        <div class="col s6 card-front west">
+            <div class="card">
+                <div class="card-image">
+                    <iframe width="100%" height="600"
+                            src="https://www.tagblatt.ch/ostschweiz/toggenburg/partyzelt-vermieter-armin-braendle-das-erste-zelt-kaufte-er-mit-geliehenem-geld-ld.1155327"
+                            frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="col s6 east">
+            <div class="card">
+                <div class="card-image">
+                    <img src="{% static 'tent/images/portrait.jpeg' %}">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col s6 west">
+            <div class="card">
+                <div class="card-image">
+                    <img src="{% static 'tent/images/Erfahrung - Aufbau.jpg' %}">
+                </div>
+            </div>
+        </div>
+        <div class="col s6 card-front east">
+            <div class="card">
+                <div class="card-content">
+                    <h3 class="card-company-info-title">Kontakt</h3>
+                    <p class="info-text">Brändle partyzelt GMBH</p>
+                    <p class="info-text">Bodenweg 2</p>
+                    <p class="info-text">9607 Mosnang</p>
+                    <div class="contact-possibilities">
+                        <div class="contact-possibilities-box"><span class="material-icons contact-icon">call</span><span class="contact-text">079 344 36 81</span></div>
+                        <div class="contact-possibilities-box"><a href="mailto:braendle-partyzelte@thurweb.ch"><span class="material-icons contact-icon">email</span></a><a href="mailto:braendle-partyzelte@thurweb.ch"><span class="contact-text">braendle-partyzelte@thurweb.ch</span></a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 {% endblock %}
