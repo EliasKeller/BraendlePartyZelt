@@ -25,7 +25,10 @@
     <div class="nav-wrapper">
         <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
         <div class="nav_logo_center">
-            <img id="nav_logo_center_img" src="{% static 'tent/images/logo - Brändle Partyzelt.svg' %}" alt="Brändle Partyzelt">
+            <a class="nav_logo_center_link" href="{% url 'tent:index' %}">
+                <img id="nav_logo_center_img" src="{% static 'tent/images/logo - Brändle Partyzelt.svg' %}"
+                     alt="Brändle Partyzelt">
+            </a>
         </div>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li class="{% block partyTent_active %}{% endblock %}"><a
