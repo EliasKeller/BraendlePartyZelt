@@ -73,7 +73,7 @@
 }
 
 .card-container-mobile {
-    display: none;
+    display: none !important;
 }
 
 /*iframe {*/
@@ -193,7 +193,7 @@
 }
 
 @media screen and (max-width: 1250px) {
-    .card-container {
+    .card-container .card-container-mobile {
         padding-top: 50px;
     }
 
